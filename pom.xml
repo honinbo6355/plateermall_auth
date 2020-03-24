@@ -3,12 +3,14 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.plateer</groupId>
-  <artifactId>shoppingmall_comment</artifactId>
+  <artifactId>shoppingmall_auth</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   
   <modules>
-  	<module>shoppingmall_comment-boot</module>
+  	<module>shoppingmall_auth-boot</module>
+    <module>shoppingmall_auth-rest</module>
+    <module>shoppingmall_auth-domain</module>
   </modules>
 </project>
