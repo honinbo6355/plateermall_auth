@@ -1,37 +1,73 @@
-1052 [main] INFO  c.p.ShoppingmallAuthBootApplication - Starting ShoppingmallAuthBootApplication on DESKTOP-BUNNS1P with PID 6280 (D:\workspace\vue\shoppingmall_auth\shoppingmall_auth-boot\target\classes started by danbi in D:\workspace\vue\shoppingmall_auth)
-1052 [main] DEBUG c.p.ShoppingmallAuthBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-1052 [main] INFO  c.p.ShoppingmallAuthBootApplication - No active profile set, falling back to default profiles: default
-2005 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-The bean 'getDataSource', defined in class path resource [com/plateer/config/MybatisConfiguration.class], could not be registered. A bean with that name has already been defined in class path resource [com/plateer/config/DB.class] and overriding is disabled.
-
-Action:
-
-Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
-
-973  [main] INFO  c.p.ShoppingmallAuthBootApplication - Starting ShoppingmallAuthBootApplication on DESKTOP-BUNNS1P with PID 13020 (D:\workspace\vue\shoppingmall_auth\shoppingmall_auth-boot\target\classes started by danbi in D:\workspace\vue\shoppingmall_auth)
-983  [main] DEBUG c.p.ShoppingmallAuthBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-985  [main] INFO  c.p.ShoppingmallAuthBootApplication - No active profile set, falling back to default profiles: default
-2942 [main] INFO  com.plateer.config.DB - MariaDB Connector/J
-3528 [main] INFO  c.p.ShoppingmallAuthBootApplication - Started ShoppingmallAuthBootApplication in 3.153 seconds (JVM running for 4.32)
-1091 [main] INFO  c.p.ShoppingmallAuthBootApplication - Starting ShoppingmallAuthBootApplication on DESKTOP-BUNNS1P with PID 8300 (D:\workspace\vue\shoppingmall_auth\shoppingmall_auth-boot\target\classes started by danbi in D:\workspace\vue\shoppingmall_auth)
-1093 [main] DEBUG c.p.ShoppingmallAuthBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-1093 [main] INFO  c.p.ShoppingmallAuthBootApplication - No active profile set, falling back to default profiles: default
-4138 [main] INFO  com.plateer.config.DB - MariaDB Connector/J
-4797 [main] INFO  c.p.ShoppingmallAuthBootApplication - Started ShoppingmallAuthBootApplication in 4.398 seconds (JVM running for 5.951)
-847  [main] INFO  c.p.ShoppingmallAuthBootApplication - Starting ShoppingmallAuthBootApplication on DESKTOP-BUNNS1P with PID 344 (D:\workspace\vue\shoppingmall_auth\shoppingmall_auth-boot\target\classes started by danbi in D:\workspace\vue\shoppingmall_auth)
-855  [main] DEBUG c.p.ShoppingmallAuthBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-855  [main] INFO  c.p.ShoppingmallAuthBootApplication - The following profiles are active: dev
-3171 [main] INFO  com.plateer.config.DB - MariaDB Connector/J
-3971 [main] INFO  c.p.ShoppingmallAuthBootApplication - Started ShoppingmallAuthBootApplication in 3.661 seconds (JVM running for 4.682)
-1188 [main] INFO  c.p.ShoppingmallAuthBootApplication - Starting ShoppingmallAuthBootApplication on DESKTOP-BUNNS1P with PID 4780 (D:\workspace\vue\shoppingmall_auth\shoppingmall_auth-boot\target\classes started by danbi in D:\workspace\vue\shoppingmall_auth)
-1192 [main] DEBUG c.p.ShoppingmallAuthBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
-1192 [main] INFO  c.p.ShoppingmallAuthBootApplication - The following profiles are active: dev
-3321 [main] INFO  com.plateer.config.DB - MariaDB Connector/J
-3992 [main] INFO  c.p.ShoppingmallAuthBootApplication - Started ShoppingmallAuthBootApplication in 3.491 seconds (JVM running for 4.862)
+538  [main] INFO  c.p.ShoppingmallAuthBootApplication - Starting ShoppingmallAuthBootApplication on DESKTOP-LI6RMNS with PID 86968 (C:\Users\eks41\IdeaProjects\shopping_auth\shoppingmall_auth-boot\target\classes started by eks41 in C:\Users\eks41\IdeaProjects\shopping_auth)
+544  [main] DEBUG c.p.ShoppingmallAuthBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+544  [main] INFO  c.p.ShoppingmallAuthBootApplication - The following profiles are active: dev
+2154 [main] INFO  com.plateer.config.DB - MariaDB Connector/J
+2641 [main] INFO  c.p.ShoppingmallAuthBootApplication - Started ShoppingmallAuthBootApplication in 2.423 seconds (JVM running for 3.126)
+552  [main] INFO  c.p.ShoppingmallAuthBootApplication - Starting ShoppingmallAuthBootApplication on DESKTOP-LI6RMNS with PID 77412 (C:\Users\eks41\IdeaProjects\shopping_auth\shoppingmall_auth-boot\target\classes started by eks41 in C:\Users\eks41\IdeaProjects\shopping_auth)
+554  [main] DEBUG c.p.ShoppingmallAuthBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+555  [main] INFO  c.p.ShoppingmallAuthBootApplication - The following profiles are active: dev
+2157 [main] INFO  com.plateer.config.DB - MariaDB Connector/J
+2624 [main] INFO  c.p.ShoppingmallAuthBootApplication - Started ShoppingmallAuthBootApplication in 2.398 seconds (JVM running for 3.122)
+577  [main] INFO  c.p.ShoppingmallAuthBootApplication - Starting ShoppingmallAuthBootApplication on DESKTOP-LI6RMNS with PID 90216 (C:\Users\eks41\IdeaProjects\shopping_auth\shoppingmall_auth-boot\target\classes started by eks41 in C:\Users\eks41\IdeaProjects\shopping_auth)
+578  [main] DEBUG c.p.ShoppingmallAuthBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+579  [main] INFO  c.p.ShoppingmallAuthBootApplication - The following profiles are active: dev
+1410 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.NoClassDefFoundError: org/springframework/security/converter/RsaKeyConverters
+	at org.springframework.security.config.crypto.RsaKeyConversionServicePostProcessor.pkcs8(RsaKeyConversionServicePostProcessor.java:89)
+	at org.springframework.security.config.crypto.RsaKeyConversionServicePostProcessor.postProcessBeanFactory(RsaKeyConversionServicePostProcessor.java:66)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:286)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:181)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:706)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:532)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.plateer.ShoppingmallAuthBootApplication.main(ShoppingmallAuthBootApplication.java:15)
+Caused by: java.lang.ClassNotFoundException: org.springframework.security.converter.RsaKeyConverters
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 13 common frames omitted
+568  [main] INFO  c.p.ShoppingmallAuthBootApplication - Starting ShoppingmallAuthBootApplication on DESKTOP-LI6RMNS with PID 90052 (C:\Users\eks41\IdeaProjects\shopping_auth\shoppingmall_auth-boot\target\classes started by eks41 in C:\Users\eks41\IdeaProjects\shopping_auth)
+570  [main] DEBUG c.p.ShoppingmallAuthBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+571  [main] INFO  c.p.ShoppingmallAuthBootApplication - The following profiles are active: dev
+1425 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.NoClassDefFoundError: org/springframework/security/converter/RsaKeyConverters
+	at org.springframework.security.config.crypto.RsaKeyConversionServicePostProcessor.pkcs8(RsaKeyConversionServicePostProcessor.java:89)
+	at org.springframework.security.config.crypto.RsaKeyConversionServicePostProcessor.postProcessBeanFactory(RsaKeyConversionServicePostProcessor.java:66)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:286)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:181)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:706)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:532)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.plateer.ShoppingmallAuthBootApplication.main(ShoppingmallAuthBootApplication.java:15)
+Caused by: java.lang.ClassNotFoundException: org.springframework.security.converter.RsaKeyConverters
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:349)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 13 common frames omitted
+559  [main] INFO  c.p.ShoppingmallAuthBootApplication - Starting ShoppingmallAuthBootApplication on DESKTOP-LI6RMNS with PID 89328 (C:\Users\eks41\IdeaProjects\shopping_auth\shoppingmall_auth-boot\target\classes started by eks41 in C:\Users\eks41\IdeaProjects\shopping_auth)
+561  [main] DEBUG c.p.ShoppingmallAuthBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+561  [main] INFO  c.p.ShoppingmallAuthBootApplication - The following profiles are active: dev
+2159 [main] INFO  com.plateer.config.DB - MariaDB Connector/J
+2643 [main] INFO  c.p.ShoppingmallAuthBootApplication - Started ShoppingmallAuthBootApplication in 2.424 seconds (JVM running for 3.231)
+537  [main] INFO  c.p.ShoppingmallAuthBootApplication - Starting ShoppingmallAuthBootApplication on DESKTOP-LI6RMNS with PID 90384 (C:\Users\eks41\IdeaProjects\shopping_auth\shoppingmall_auth-boot\target\classes started by eks41 in C:\Users\eks41\IdeaProjects\shopping_auth)
+539  [main] DEBUG c.p.ShoppingmallAuthBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+539  [main] INFO  c.p.ShoppingmallAuthBootApplication - The following profiles are active: dev
+2174 [main] INFO  com.plateer.config.DB - MariaDB Connector/J
+2657 [main] INFO  c.p.ShoppingmallAuthBootApplication - Started ShoppingmallAuthBootApplication in 2.442 seconds (JVM running for 3.172)
+566  [main] INFO  c.p.ShoppingmallAuthBootApplication - Starting ShoppingmallAuthBootApplication on DESKTOP-LI6RMNS with PID 92472 (C:\Users\eks41\IdeaProjects\shopping_auth\shoppingmall_auth-boot\target\classes started by eks41 in C:\Users\eks41\IdeaProjects\shopping_auth)
+568  [main] DEBUG c.p.ShoppingmallAuthBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+569  [main] INFO  c.p.ShoppingmallAuthBootApplication - The following profiles are active: dev
+2218 [main] INFO  com.plateer.config.DB - MariaDB Connector/J
+2729 [main] INFO  c.p.ShoppingmallAuthBootApplication - Started ShoppingmallAuthBootApplication in 2.515 seconds (JVM running for 3.215)
