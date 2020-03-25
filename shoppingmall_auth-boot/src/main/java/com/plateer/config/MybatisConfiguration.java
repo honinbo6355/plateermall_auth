@@ -15,7 +15,7 @@ import javax.sql.DataSource;
 
 //@Lazy
 @Configuration
-@MapperScan(value = "com.plateer", lazyInitialization = "false")
+@MapperScan(value = "com.plateer.store.mapper", lazyInitialization = "false")
 public class MybatisConfiguration {
 
     private DataSource dataSource;
@@ -32,7 +32,7 @@ public class MybatisConfiguration {
 
         PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
 
-        sessionFactory.setMapperLocations(resolver.getResources("classpath*:/io/namoosori/mapper/**/*.xml"));
+        sessionFactory.setMapperLocations(resolver.getResources("classpath*:/com/plateer/store/mapper/**/*.xml"));
         sessionFactory.setConfigLocation(resolver.getResource("classpath:/config/mybatis-config.xml"));
         return sessionFactory.getObject();
     }

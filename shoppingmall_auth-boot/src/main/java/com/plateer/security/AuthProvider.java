@@ -14,8 +14,11 @@ import org.springframework.stereotype.Component;
 @Slf4j
 public class AuthProvider implements AuthenticationProvider {
 
-    @Autowired
     UserService userService;
+
+    public AuthProvider(UserService userService){
+        this.userService = userService;
+    }
 
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
