@@ -60,13 +60,13 @@ public class UserController {
     }
 
     @PostMapping(path = "/login")
-    public String login(@RequestBody UserDto user, HttpServletResponse response) {
+    public String login(@RequestBody UserDto user) {
         UserDto loginUsers;
         try {
             //loginUsers = userService.signin(user.getEmail(), user.getPassword());
             loginUsers = new UserDto("eks4116@gmail.com", "danbi", "password", "01047264128");
             String token = jwtService.create("member", loginUsers, "user");
-            response.setHeader(HEADER_AUTH, "Bearer " + token);
+            //response.setHeader(HEADER_AUTH, "Bearer " + token);
             return token;
         } catch (Exception e) {
             return "failed";
