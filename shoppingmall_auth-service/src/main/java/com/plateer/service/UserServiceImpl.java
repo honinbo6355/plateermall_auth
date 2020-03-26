@@ -1,16 +1,31 @@
 package com.plateer.service;
 
-import com.plateer.domain.dto.UserDto;
+import com.plateer.UserDao;
+import com.plateer.domain.User;
+import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.stereotype.Service;
 
 @Service
-public class UserServiceImpl implements UserService {
-    public UserDto getMemberByUserEmail(String email) {
-        return new UserDto(email, "name", "password", "phoneNumber");
+public class UserServiceImpl implements UserService{
+
+    private UserDao userDao;
+
+    public UserServiceImpl(UserDao userDao){
+        this.userDao = userDao;
     }
 
     @Override
-    public UserDto signin(String email, String password) {
+    public void signUp(User user) {
+        user.setPassword(BCrypt.hashpw(user.getPassword(),BCrypt.gensalt()));
+        userDao.signUp(user);
+    }
+
+    public User getUserByEmail(String email) {
+        return userDao.getUserByEmail(email);
+    }
+
+    @Override
+    public User signin(String email, String password) {
 //        UserDto users = usersRepository.findByEmail(email);
 //        Objects.requireNonNull(users, SIGNIN_EXCEPTION_MSG);
 //
@@ -18,6 +33,7 @@ public class UserServiceImpl implements UserService {
 //            throw new IllegalStateException(SIGNIN_EXCEPTION_MSG);
 //        }
 
-        return new UserDto("eks4116@gmail.com","danbi","password","01047264128");
+        return new User(email, "1234","danbi", "phoneNumber",null,null,null,null,false,false);
     }
+
 }

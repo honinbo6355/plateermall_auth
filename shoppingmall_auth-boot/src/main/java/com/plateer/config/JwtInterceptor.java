@@ -1,4 +1,4 @@
-package com.plateer.security;
+package com.plateer.config;
 
 import com.plateer.error.UnauthorizedException;
 import com.plateer.service.JwtService;

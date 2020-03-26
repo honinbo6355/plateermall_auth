@@ -1,9 +1,11 @@
 package com.plateer.service;
 
-import com.plateer.domain.dto.UserDto;
+import com.plateer.domain.User;
 
 public interface UserService {
-    UserDto getMemberByUserEmail(String email);
+    void signUp(User user);
 
-    UserDto signin(String email, String password);
+    User getUserByEmail(String email);
+
+    User signin(String email, String password);
 }

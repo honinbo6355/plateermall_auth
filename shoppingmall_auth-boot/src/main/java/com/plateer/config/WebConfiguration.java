@@ -1,6 +1,5 @@
 package com.plateer.config;
 
-import com.plateer.security.JwtInterceptor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -9,7 +8,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class WebConfiguration implements WebMvcConfigurer {
 
     private static final String[] EXCLUDE_PATHS = {
-            "/api/user/create",
+            "/api/user/signUp",
             "/api/user/login",
             "/member/**",
             "/error/**"

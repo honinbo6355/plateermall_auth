@@ -3,19 +3,16 @@ package com.plateer.config;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.annotation.MapperScan;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Lazy;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
-import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 import javax.sql.DataSource;
 
 //@Lazy
 @Configuration
-@MapperScan(value = "com.plateer.store.mapper", lazyInitialization = "false")
+@MapperScan(basePackages = "com.plateer.mapper", lazyInitialization = "false")
 public class MybatisConfiguration {
 
     private DataSource dataSource;
@@ -32,7 +29,7 @@ public class MybatisConfiguration {
 
         PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
 
-        sessionFactory.setMapperLocations(resolver.getResources("classpath*:/com/plateer/store/mapper/**/*.xml"));
+        sessionFactory.setMapperLocations(resolver.getResources("classpath*:com/plateer/mapper/**/*.xml"));
         sessionFactory.setConfigLocation(resolver.getResource("classpath:/config/mybatis-config.xml"));
         return sessionFactory.getObject();
     }

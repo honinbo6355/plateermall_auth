@@ -13,5 +13,6 @@
     <module>shoppingmall_auth-rest</module>
     <module>shoppingmall_auth-domain</module>
       <module>shoppingmall_auth-service</module>
+    <module>shoppingmall_auth-store</module>
   </modules>
 </project>

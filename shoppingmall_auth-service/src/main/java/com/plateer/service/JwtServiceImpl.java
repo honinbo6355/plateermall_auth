@@ -52,8 +52,8 @@ public class JwtServiceImpl implements JwtService{
 
     @Override
     public Map<String, Object> get(String key, String token) {
-//        HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest();
-//        String jwt = request.getHeader("Authorization").split(" ")[1];
+        HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest();
+        String jwt = request.getHeader("Authorization").split(" ")[1];
         Jws<Claims> claims = null;
         try {
             claims = Jwts.parser()

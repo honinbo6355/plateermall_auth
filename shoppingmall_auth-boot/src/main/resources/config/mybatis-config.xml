@@ -25,10 +25,7 @@
 
     <!--   &lt;!&ndash; 클래스 별명 지정 &ndash;&gt;-->
     <typeAliases>
-        <!--      <typeAlias type="io.namoosori.service.dao.CustomerDao"-->
-        <!--         alias="CustomerDao" />-->
-        <!--      <typeAlias type="io.namoosori.domain.goods.Goods"-->
-        <!--               alias="Goods" />-->
+        <typeAlias type="com.plateer.domain.User" alias="User"/>
     </typeAliases>
 
 
