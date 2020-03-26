@@ -26,20 +26,24 @@ public class UserController {
     }
 
     @PostMapping("/signUp")
-    public void signUp(@RequestBody User user){
+    public void signUp(@RequestBody User user) {
         userService.signUp(user);
     }
 
     @PostMapping("/login")
     public String login(@RequestBody User user, HttpServletResponse response) {
+        String msg;
         try {
-            User loginUser = userService.getUserByEmail(user.getEmail());
-            String token = jwtService.create("member", loginUser, "user");
-            response.setHeader("Authorization", "Bearer " + token);
-            return token;
+            msg = userService.validateUser(user);
+            if (msg.equals("success")) {
+                String token = jwtService.create("member", user, "user");
+                response.setHeader("Authorization", "Bearer " + token);
+                return token;
+            }
         } catch (Exception e) {
             return "failed";
         }
+        return msg;
     }
 
 //    @GetMapping

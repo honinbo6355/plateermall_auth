@@ -2,13 +2,16 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="shoppingmall_auth-boot" />
+        <module name="shoppingmall_auth-store" />
         <module name="shoppingmall_auth-rest" />
         <module name="shoppingmall_auth-domain" />
+        <module name="shoppingmall_auth-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -16,6 +19,8 @@
       <module name="shoppingmall_auth-boot" target="1.8" />
       <module name="shoppingmall_auth-domain" target="1.8" />
       <module name="shoppingmall_auth-rest" target="1.8" />
+      <module name="shoppingmall_auth-service" target="1.8" />
+      <module name="shoppingmall_auth-store" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

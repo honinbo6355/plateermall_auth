@@ -6,6 +6,8 @@
       <module fileurl="file://$PROJECT_DIR$/shoppingmall_auth-boot/shoppingmall_auth-boot.iml" filepath="$PROJECT_DIR$/shoppingmall_auth-boot/shoppingmall_auth-boot.iml" />
       <module fileurl="file://$PROJECT_DIR$/shoppingmall_auth-domain/shoppingmall_auth-domain.iml" filepath="$PROJECT_DIR$/shoppingmall_auth-domain/shoppingmall_auth-domain.iml" />
       <module fileurl="file://$PROJECT_DIR$/shoppingmall_auth-rest/shoppingmall_auth-rest.iml" filepath="$PROJECT_DIR$/shoppingmall_auth-rest/shoppingmall_auth-rest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shoppingmall_auth-service/shoppingmall_auth-service.iml" filepath="$PROJECT_DIR$/shoppingmall_auth-service/shoppingmall_auth-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shoppingmall_auth-store/shoppingmall_auth-store.iml" filepath="$PROJECT_DIR$/shoppingmall_auth-store/shoppingmall_auth-store.iml" />
     </modules>
   </component>
 </project>

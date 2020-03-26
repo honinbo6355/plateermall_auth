@@ -7,5 +7,7 @@ public interface UserService {
 
     User getUserByEmail(String email);
 
+    String validateUser(User user);
+
     User signin(String email, String password);
 }

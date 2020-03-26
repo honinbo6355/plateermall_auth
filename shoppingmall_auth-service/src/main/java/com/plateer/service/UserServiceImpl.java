@@ -27,10 +27,21 @@ public class UserServiceImpl implements UserService {
         return userDao.getUserByEmail(email);
     }
 
-    public User validateUser(User user) {
+    public String validateUser(User user) {
+        String msg;
+        boolean result;
         User loginUser = getUserByEmail(user.getEmail());
-        return null;
-
+        if(loginUser == null){
+            msg = "noExist";
+        }else{
+            result = BCrypt.checkpw(user.getPassword(),loginUser.getPassword());
+            if(result){
+                msg = "success";
+            }else{
+                msg = "incorrect";
+            }
+        }
+        return msg;
     }
 
     @Override

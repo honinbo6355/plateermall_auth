@@ -22,6 +22,14 @@ public class JwtServiceImpl implements JwtService {
 
     private static final String SALT = "luvookSecret";
 
+    /**
+     *
+     * @param key : member
+     * @param data : User
+     * @param subject : user
+     * @param <T>
+     * @return
+     */
     @Override
     public <T> String create(String key, T data, String subject) {
         String jwt = Jwts.builder()

@@ -84,17 +84,14 @@
     <orderEntry type="library" name="Maven: io.springfox:springfox-swagger-ui:2.9.2" level="project" />
     <orderEntry type="module" module-name="shoppingmall_auth-rest" />
     <orderEntry type="module" module-name="shoppingmall_auth-domain" />
-    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-security:2.2.5.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-aop:5.2.4.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-config:5.2.2.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-web:5.2.2.RELEASE" level="project" />
+    <orderEntry type="module" module-name="shoppingmall_auth-service" />
+    <orderEntry type="module" module-name="shoppingmall_auth-store" />
+    <orderEntry type="library" name="Maven: org.mindrot:jbcrypt:0.3m" level="project" />
+    <orderEntry type="library" name="Maven: org.modelmapper:modelmapper:2.3.6" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-web:5.2.4.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context:5.2.4.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-aop:5.2.4.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-expression:5.2.4.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.security.oauth:spring-security-oauth2:2.3.5.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.9" level="project" />
-    <orderEntry type="library" name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.9.13" level="project" />
-    <orderEntry type="library" name="Maven: org.codehaus.jackson:jackson-core-asl:1.9.13" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-core:5.2.2.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: io.jsonwebtoken:jjwt:0.9.1" level="project" />
   </component>
 </module>

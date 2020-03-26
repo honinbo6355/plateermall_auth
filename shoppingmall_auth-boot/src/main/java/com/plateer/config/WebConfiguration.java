@@ -8,8 +8,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class WebConfiguration implements WebMvcConfigurer {
 
     private static final String[] EXCLUDE_PATHS = {
-            "/api/user/signUp",
-            "/api/user/login"
+            "/api/user/**"
     };
 
     private JwtInterceptor jwtInterceptor;
