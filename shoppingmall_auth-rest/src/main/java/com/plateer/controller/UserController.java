@@ -7,7 +7,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletResponse;
-import java.util.Map;
 
 @Slf4j
 @RestController
@@ -20,7 +19,6 @@ public class UserController {
 
     UserService userService;
     JwtService jwtService;
-//    ModelMapper modelMapper;
 
     public UserController(UserService userService, JwtService jwtService) {
         this.userService = userService;

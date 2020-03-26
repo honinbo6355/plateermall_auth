@@ -24,10 +24,10 @@ public class JwtInterceptor implements HandlerInterceptor {
             throws Exception {
         final String token = request.getHeader(HEADER_AUTH).split(" ")[1];
 
-        if(token != null && jwtService.isUsable(token)){
-            return true;
-        } else {
-            throw new UnauthorizedException();
+        if(token == null || !jwtService.isUsable(token)){
+            response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
         }
+
+        return true;
     }
 }

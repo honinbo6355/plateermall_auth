@@ -18,7 +18,7 @@ import java.util.Map;
 
 @Slf4j
 @Service
-public class JwtServiceImpl implements JwtService{
+public class JwtServiceImpl implements JwtService {
 
     private static final String SALT = "luvookSecret";
 
@@ -74,12 +74,6 @@ public class JwtServiceImpl implements JwtService{
     }
 
     @Override
-    public long getMemberId() {
-        Integer memberId = (Integer) this.get("member","token").get("id");
-        return new Long(memberId);
-    }
-
-    @Override
     public boolean isUsable(String jwt) {
         try {
             Jws<Claims> claims = Jwts.parser()
@@ -94,10 +88,7 @@ public class JwtServiceImpl implements JwtService{
             } else {
                 log.error(e.getMessage());
             }
-            throw new UnauthorizedException();
-
-            /*개발환경!!!
-             * return false;*/
+            return false;
 
         }
     }

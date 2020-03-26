@@ -9,9 +9,7 @@ public class WebConfiguration implements WebMvcConfigurer {
 
     private static final String[] EXCLUDE_PATHS = {
             "/api/user/signUp",
-            "/api/user/login",
-            "/member/**",
-            "/error/**"
+            "/api/user/login"
     };
 
     private JwtInterceptor jwtInterceptor;
