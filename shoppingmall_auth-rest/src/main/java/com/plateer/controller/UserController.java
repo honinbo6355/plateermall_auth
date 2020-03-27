@@ -1,11 +1,14 @@
 package com.plateer.controller;
 
+import com.plateer.controller.utils.TokenUtil;
 import com.plateer.domain.User;
 import com.plateer.service.JwtService;
 import com.plateer.service.UserService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.ResponseCookie;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
 
 @Slf4j
@@ -13,63 +16,59 @@ import javax.servlet.http.HttpServletResponse;
 @RequestMapping("/api/user")
 @CrossOrigin(allowCredentials = "true", origins = {"*"}, methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.DELETE, RequestMethod.PUT},
         allowedHeaders = {"Content-Type", "X-Requested-With", "accept", "Origin", "Access-Control-Request-Method",
-                "Access-Control-Request-Headers", "Access-Control-Allow-Origin", "Set-Cookie"},
-        exposedHeaders = {"Access-Control-Allow-Origin", "Access-Control-Allow-Credentials"}, maxAge = 3000)
+                "Access-Control-Request-Headers", "Access-Control-Allow-Origin", "Set-Cookie","token"},
+        exposedHeaders = {"Access-Control-Allow-Origin", "Access-Control-Allow-Credentials","token"}, maxAge = 3000)
 public class UserController {
 
     UserService userService;
     JwtService jwtService;
+    TokenUtil tokenUtil;
 
-    public UserController(UserService userService, JwtService jwtService) {
+    public UserController(UserService userService, JwtService jwtService, TokenUtil tokenUtil) {
         this.userService = userService;
         this.jwtService = jwtService;
+        this.tokenUtil = tokenUtil;
     }
 
+    /**
+     * 회원가입
+     * @param user
+     */
     @PostMapping("/signUp")
     public void signUp(@RequestBody User user) {
         userService.signUp(user);
     }
 
+    /**
+     * 로그인
+     * @param user
+     * @param response
+     * @return
+     */
     @PostMapping("/login")
     public String login(@RequestBody User user, HttpServletResponse response) {
         String msg;
         try {
             msg = userService.validateUser(user);
             if (msg.equals("success")) {
-                String token = jwtService.create("member", user, "user");
-                response.setHeader("Authorization", "Bearer " + token);
-                return token;
+                String token = jwtService.create("member", user.getEmail(), "user");
+
+                ResponseCookie cookie = ResponseCookie.from("token", token)
+                        .build();
+
+                response.addHeader("Set-Cookie", cookie.toString());
+                //response.addHeader("token", cookie.toString());
             }
         } catch (Exception e) {
+            log.error(e.getMessage());
             return "failed";
         }
         return msg;
     }
 
-//    @GetMapping
-//    public LoginDto getUser() {
-//        long memberId = jwtService.getMemberId();
-//        //Optional<UserDto> loginUsers = userRepository.findById(memberId);
-//        return modelMapper.map(new User("eks4116@gmail.com", "danbi", "password", "01047264128"), LoginDto.class);
-//    }
-
-    /**
-     * Vue페이지에서 router & axios 호출 후 interceptor로 token 유효성확인
-     * @param token
-     * @return
-     */
-//    @PostMapping("/getUser")
-//    public User getUserFromClient(@RequestBody String token) {
-//        log.info("/getUserFromClient 실행실행");
-//        Map<String, Object> result = jwtService.get("member", token);
-//
-//        return null;
-//    }
-//
-//    @GetMapping("/{email}")
-//    public User getUser(@PathVariable String email) {
-//        return new User(email, "1234","danbi", "phoneNumber",null,null,null,null,false,false);
-//    }
-
-
+    @GetMapping
+    public String getUserInfo(){
+        tokenUtil.getUserEmail();
+        return "";
+    }
 }

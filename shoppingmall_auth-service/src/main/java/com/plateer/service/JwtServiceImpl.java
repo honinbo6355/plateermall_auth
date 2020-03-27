@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import java.io.UnsupportedEncodingException;
 import java.util.Date;
@@ -31,7 +32,7 @@ public class JwtServiceImpl implements JwtService {
      * @return
      */
     @Override
-    public <T> String create(String key, T data, String subject) {
+    public String create(String key, String data, String subject) {
         String jwt = Jwts.builder()
                 .setHeaderParam("typ", "JWT")
                 .setHeaderParam("regDate", System.currentTimeMillis())
@@ -61,7 +62,17 @@ public class JwtServiceImpl implements JwtService {
     @Override
     public Map<String, Object> get(String key, String token) {
         HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest();
-        String jwt = request.getHeader("Authorization").split(" ")[1];
+
+        Cookie[] cookies = request.getCookies();
+        String jwt;
+        if (cookies != null) {
+            for (Cookie cookie : cookies) {
+                if (cookie.getName().equals("token")) {
+                  jwt = cookie.getValue();
+                }
+            }
+        }
+
         Jws<Claims> claims = null;
         try {
             claims = Jwts.parser()
