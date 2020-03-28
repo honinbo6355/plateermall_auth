@@ -1,5 +1,7 @@
 package com.plateer.service;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.plateer.domain.User;
 import com.plateer.error.UnauthorizedException;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
@@ -27,16 +29,13 @@ public class JwtServiceImpl implements JwtService {
      *
      * @param key : member
      * @param data : User
-     * @param subject : user
-     * @param <T>
      * @return
      */
     @Override
-    public String create(String key, String data, String subject) {
+    public String create(String key, User data) {
         String jwt = Jwts.builder()
                 .setHeaderParam("typ", "JWT")
                 .setHeaderParam("regDate", System.currentTimeMillis())
-                .setSubject(subject)
                 .setExpiration(new Date(System.currentTimeMillis() + 86400 * 1000 * 2))
                 .claim(key, data)
                 .signWith(SignatureAlgorithm.HS256, this.generateKey())
@@ -60,24 +59,19 @@ public class JwtServiceImpl implements JwtService {
     }
 
     @Override
-    public Map<String, Object> get(String key, String token) {
+    public Map<String, Object> get(String key) {
         HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.currentRequestAttributes()).getRequest();
+        String jwt = request.getHeader("Authorization").split(" ")[1];
 
-        Cookie[] cookies = request.getCookies();
-        String jwt;
-        if (cookies != null) {
-            for (Cookie cookie : cookies) {
-                if (cookie.getName().equals("token")) {
-                  jwt = cookie.getValue();
-                }
-            }
+        if(jwt == null || !isUsable(jwt)){
+            return null;
         }
 
         Jws<Claims> claims = null;
         try {
             claims = Jwts.parser()
                     .setSigningKey(SALT.getBytes("UTF-8"))
-                    .parseClaimsJws(token);
+                    .parseClaimsJws(jwt);
         } catch (Exception e) {
             if (log.isInfoEnabled()) {
                 e.printStackTrace();
@@ -88,7 +82,7 @@ public class JwtServiceImpl implements JwtService {
         }
         @SuppressWarnings("unchecked")
         Map<String, Object> value = (LinkedHashMap<String, Object>) claims.getBody().get(key);
-        System.out.println(value);
+
         return value;
     }
 

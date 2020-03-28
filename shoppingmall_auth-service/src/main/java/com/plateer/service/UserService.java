@@ -9,5 +9,5 @@ public interface UserService {
 
     String validateUser(User user);
 
-    User signin(String email, String password);
+    User getCurrentUserInfo();
 }

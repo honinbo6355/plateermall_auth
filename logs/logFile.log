@@ -3074,3 +3074,200 @@ Consider defining a bean of type 'com.plateer.controller.utils.TokenUtil' in you
 164310 [http-nio-9999-exec-6] DEBUG c.p.m.UserMapper.getUserByEmail - ==>  Preparing: select * from `user` where email = ? 
 164310 [http-nio-9999-exec-6] DEBUG c.p.m.UserMapper.getUserByEmail - ==> Parameters: leesk1997@naver.com(String)
 164318 [http-nio-9999-exec-6] DEBUG c.p.m.UserMapper.getUserByEmail - <==      Total: 1
+735  [main] INFO  c.p.ShoppingmallAuthBootApplication - Starting ShoppingmallAuthBootApplication on DESKTOP-LI6RMNS with PID 31640 (C:\Users\eks41\IdeaProjects\shopping_auth\shoppingmall_auth-boot\target\classes started by eks41 in C:\Users\eks41\IdeaProjects\shopping_auth)
+738  [main] DEBUG c.p.ShoppingmallAuthBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+738  [main] INFO  c.p.ShoppingmallAuthBootApplication - The following profiles are active: dev
+2772 [main] INFO  com.plateer.config.DB - MariaDB Connector/J
+3228 [main] INFO  c.p.ShoppingmallAuthBootApplication - Started ShoppingmallAuthBootApplication in 2.919 seconds (JVM running for 4.331)
+122135 [http-nio-9999-exec-1] DEBUG c.p.m.UserMapper.getUserByEmail - ==>  Preparing: select * from `user` where email = ? 
+122146 [http-nio-9999-exec-1] DEBUG c.p.m.UserMapper.getUserByEmail - ==> Parameters: leesk1997@naver.com(String)
+122162 [http-nio-9999-exec-1] DEBUG c.p.m.UserMapper.getUserByEmail - <==      Total: 1
+945940 [http-nio-9999-exec-5] DEBUG c.p.m.UserMapper.getUserByEmail - ==>  Preparing: select * from `user` where email = ? 
+945940 [http-nio-9999-exec-5] DEBUG c.p.m.UserMapper.getUserByEmail - ==> Parameters: leesk(String)
+945945 [http-nio-9999-exec-5] DEBUG c.p.m.UserMapper.getUserByEmail - <==      Total: 0
+1072635 [http-nio-9999-exec-7] DEBUG c.p.m.UserMapper.getUserByEmail - ==>  Preparing: select * from `user` where email = ? 
+1072635 [http-nio-9999-exec-7] DEBUG c.p.m.UserMapper.getUserByEmail - ==> Parameters: gg(String)
+1072640 [http-nio-9999-exec-7] DEBUG c.p.m.UserMapper.getUserByEmail - <==      Total: 0
+1079212 [http-nio-9999-exec-8] DEBUG c.p.m.UserMapper.getUserByEmail - ==>  Preparing: select * from `user` where email = ? 
+1079213 [http-nio-9999-exec-8] DEBUG c.p.m.UserMapper.getUserByEmail - ==> Parameters: leesk1997@naver.com(String)
+1079218 [http-nio-9999-exec-8] DEBUG c.p.m.UserMapper.getUserByEmail - <==      Total: 1
+1082632 [http-nio-9999-exec-9] DEBUG c.p.m.UserMapper.getUserByEmail - ==>  Preparing: select * from `user` where email = ? 
+1082633 [http-nio-9999-exec-9] DEBUG c.p.m.UserMapper.getUserByEmail - ==> Parameters: leesk1997@naver.com(String)
+1082637 [http-nio-9999-exec-9] DEBUG c.p.m.UserMapper.getUserByEmail - <==      Total: 1
+794  [main] INFO  c.p.ShoppingmallAuthBootApplication - Starting ShoppingmallAuthBootApplication on DESKTOP-LI6RMNS with PID 30124 (C:\Users\eks41\IdeaProjects\shopping_auth\shoppingmall_auth-boot\target\classes started by eks41 in C:\Users\eks41\IdeaProjects\shopping_auth)
+797  [main] DEBUG c.p.ShoppingmallAuthBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+797  [main] INFO  c.p.ShoppingmallAuthBootApplication - The following profiles are active: dev
+2741 [main] INFO  com.plateer.config.DB - MariaDB Connector/J
+3180 [main] INFO  c.p.ShoppingmallAuthBootApplication - Started ShoppingmallAuthBootApplication in 2.902 seconds (JVM running for 3.854)
+27093 [http-nio-9999-exec-1] DEBUG c.p.m.UserMapper.getUserByEmail - ==>  Preparing: select * from `user` where email = ? 
+27103 [http-nio-9999-exec-1] DEBUG c.p.m.UserMapper.getUserByEmail - ==> Parameters: leesk1997@naver.com(String)
+27117 [http-nio-9999-exec-1] DEBUG c.p.m.UserMapper.getUserByEmail - <==      Total: 1
+27195 [http-nio-9999-exec-1] DEBUG c.p.m.UserMapper.getUserByEmail - ==>  Preparing: select * from `user` where email = ? 
+27195 [http-nio-9999-exec-1] DEBUG c.p.m.UserMapper.getUserByEmail - ==> Parameters: leesk1997@naver.com(String)
+27199 [http-nio-9999-exec-1] DEBUG c.p.m.UserMapper.getUserByEmail - <==      Total: 1
+126148 [http-nio-9999-exec-4] INFO  com.plateer.config.JwtInterceptor - JWT 인터셉터!!!!!!!!!!!!!
+222769 [http-nio-9999-exec-5] INFO  com.plateer.config.JwtInterceptor - JWT 인터셉터!!!!!!!!!!!!!
+990421 [http-nio-9999-exec-8] INFO  com.plateer.config.JwtInterceptor - JWT 인터셉터!!!!!!!!!!!!!
+1114570 [http-nio-9999-exec-1] INFO  com.plateer.config.JwtInterceptor - JWT 인터셉터!!!!!!!!!!!!!
+834  [main] INFO  c.p.ShoppingmallAuthBootApplication - Starting ShoppingmallAuthBootApplication on DESKTOP-LI6RMNS with PID 29520 (C:\Users\eks41\IdeaProjects\shopping_auth\shoppingmall_auth-boot\target\classes started by eks41 in C:\Users\eks41\IdeaProjects\shopping_auth)
+837  [main] DEBUG c.p.ShoppingmallAuthBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+837  [main] INFO  c.p.ShoppingmallAuthBootApplication - The following profiles are active: dev
+2753 [main] INFO  com.plateer.config.DB - MariaDB Connector/J
+3187 [main] INFO  c.p.ShoppingmallAuthBootApplication - Started ShoppingmallAuthBootApplication in 2.895 seconds (JVM running for 3.77)
+19405 [http-nio-9999-exec-2] INFO  com.plateer.config.JwtInterceptor - JWT 인터셉터!!!!!!!!!!!!!
+117590 [http-nio-9999-exec-3] INFO  com.plateer.config.JwtInterceptor - JWT 인터셉터!!!!!!!!!!!!!
+117604 [http-nio-9999-exec-3] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.plateer.service.JwtServiceImpl.get(JwtServiceImpl.java:64)
+	at com.plateer.service.UserServiceImpl.getCurrentUserInfo(UserServiceImpl.java:52)
+	at com.plateer.controller.UserController.getCurrentUserInfo(UserController.java:52)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+117610 [http-nio-9999-exec-3] INFO  com.plateer.config.JwtInterceptor - JWT 인터셉터!!!!!!!!!!!!!
+757  [main] INFO  c.p.ShoppingmallAuthBootApplication - Starting ShoppingmallAuthBootApplication on DESKTOP-LI6RMNS with PID 36020 (C:\Users\eks41\IdeaProjects\shopping_auth\shoppingmall_auth-boot\target\classes started by eks41 in C:\Users\eks41\IdeaProjects\shopping_auth)
+760  [main] DEBUG c.p.ShoppingmallAuthBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+760  [main] INFO  c.p.ShoppingmallAuthBootApplication - The following profiles are active: dev
+2633 [main] INFO  com.plateer.config.DB - MariaDB Connector/J
+3110 [main] INFO  c.p.ShoppingmallAuthBootApplication - Started ShoppingmallAuthBootApplication in 2.837 seconds (JVM running for 3.746)
+9722 [http-nio-9999-exec-1] INFO  com.plateer.config.JwtInterceptor - JWT 인터셉터!!!!!!!!!!!!!
+9741 [http-nio-9999-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.plateer.service.JwtServiceImpl.get(JwtServiceImpl.java:64)
+	at com.plateer.service.UserServiceImpl.getCurrentUserInfo(UserServiceImpl.java:52)
+	at com.plateer.controller.UserController.getCurrentUserInfo(UserController.java:52)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+9747 [http-nio-9999-exec-1] INFO  com.plateer.config.JwtInterceptor - JWT 인터셉터!!!!!!!!!!!!!
+79380 [http-nio-9999-exec-2] INFO  com.plateer.config.JwtInterceptor - JWT 인터셉터!!!!!!!!!!!!!
+847  [main] INFO  c.p.ShoppingmallAuthBootApplication - Starting ShoppingmallAuthBootApplication on DESKTOP-LI6RMNS with PID 35600 (C:\Users\eks41\IdeaProjects\shopping_auth\shoppingmall_auth-boot\target\classes started by eks41 in C:\Users\eks41\IdeaProjects\shopping_auth)
+850  [main] DEBUG c.p.ShoppingmallAuthBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+850  [main] INFO  c.p.ShoppingmallAuthBootApplication - The following profiles are active: dev
+2776 [main] INFO  com.plateer.config.DB - MariaDB Connector/J
+3238 [main] INFO  c.p.ShoppingmallAuthBootApplication - Started ShoppingmallAuthBootApplication in 2.941 seconds (JVM running for 3.819)
+15811 [http-nio-9999-exec-2] DEBUG c.p.m.UserMapper.getUserByEmail - ==>  Preparing: select * from `user` where email = ? 
+15821 [http-nio-9999-exec-2] DEBUG c.p.m.UserMapper.getUserByEmail - ==> Parameters: leesk1997@naver.com(String)
+15836 [http-nio-9999-exec-2] DEBUG c.p.m.UserMapper.getUserByEmail - <==      Total: 1
+15914 [http-nio-9999-exec-2] DEBUG c.p.m.UserMapper.getUserByEmail - ==>  Preparing: select * from `user` where email = ? 
+15914 [http-nio-9999-exec-2] DEBUG c.p.m.UserMapper.getUserByEmail - ==> Parameters: leesk1997@naver.com(String)
+15918 [http-nio-9999-exec-2] DEBUG c.p.m.UserMapper.getUserByEmail - <==      Total: 1
+24428 [http-nio-9999-exec-3] INFO  com.plateer.config.JwtInterceptor - JWT 인터셉터!!!!!!!!!!!!!
+177968 [http-nio-9999-exec-6] INFO  com.plateer.config.JwtInterceptor - JWT 인터셉터!!!!!!!!!!!!!
+299883 [http-nio-9999-exec-8] INFO  com.plateer.config.JwtInterceptor - JWT 인터셉터!!!!!!!!!!!!!
+318870 [http-nio-9999-exec-9] INFO  com.plateer.config.JwtInterceptor - JWT 인터셉터!!!!!!!!!!!!!
+504646 [http-nio-9999-exec-10] INFO  com.plateer.config.JwtInterceptor - JWT 인터셉터!!!!!!!!!!!!!
+699486 [http-nio-9999-exec-1] INFO  com.plateer.config.JwtInterceptor - JWT 인터셉터!!!!!!!!!!!!!
+780  [main] INFO  c.p.ShoppingmallAuthBootApplication - Starting ShoppingmallAuthBootApplication on DESKTOP-LI6RMNS with PID 39656 (C:\Users\eks41\IdeaProjects\shopping_auth\shoppingmall_auth-boot\target\classes started by eks41 in C:\Users\eks41\IdeaProjects\shopping_auth)
+783  [main] DEBUG c.p.ShoppingmallAuthBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+783  [main] INFO  c.p.ShoppingmallAuthBootApplication - The following profiles are active: dev
+2711 [main] INFO  com.plateer.config.DB - MariaDB Connector/J
+3155 [main] INFO  c.p.ShoppingmallAuthBootApplication - Started ShoppingmallAuthBootApplication in 2.872 seconds (JVM running for 3.739)
+26510 [http-nio-9999-exec-1] INFO  com.plateer.config.JwtInterceptor - JWT 인터셉터!!!!!!!!!!!!!
+139429 [http-nio-9999-exec-2] INFO  com.plateer.config.JwtInterceptor - JWT 인터셉터!!!!!!!!!!!!!
+719  [main] INFO  c.p.ShoppingmallAuthBootApplication - Starting ShoppingmallAuthBootApplication on DESKTOP-LI6RMNS with PID 36520 (C:\Users\eks41\IdeaProjects\shopping_auth\shoppingmall_auth-boot\target\classes started by eks41 in C:\Users\eks41\IdeaProjects\shopping_auth)
+721  [main] DEBUG c.p.ShoppingmallAuthBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+721  [main] INFO  c.p.ShoppingmallAuthBootApplication - The following profiles are active: dev
+2621 [main] INFO  com.plateer.config.DB - MariaDB Connector/J
+3060 [main] INFO  c.p.ShoppingmallAuthBootApplication - Started ShoppingmallAuthBootApplication in 2.79 seconds (JVM running for 3.632)
+28638 [http-nio-9999-exec-1] INFO  com.plateer.config.JwtInterceptor - JWT 인터셉터!!!!!!!!!!!!!POSTHANDLE
+151661 [http-nio-9999-exec-2] INFO  com.plateer.config.JwtInterceptor - JWT 인터셉터!!!!!!!!!!!!!POSTHANDLE
+833  [main] INFO  c.p.ShoppingmallAuthBootApplication - Starting ShoppingmallAuthBootApplication on DESKTOP-LI6RMNS with PID 39328 (C:\Users\eks41\IdeaProjects\shopping_auth\shoppingmall_auth-boot\target\classes started by eks41 in C:\Users\eks41\IdeaProjects\shopping_auth)
+835  [main] DEBUG c.p.ShoppingmallAuthBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+835  [main] INFO  c.p.ShoppingmallAuthBootApplication - The following profiles are active: dev
+2799 [main] INFO  com.plateer.config.DB - MariaDB Connector/J
+3250 [main] INFO  c.p.ShoppingmallAuthBootApplication - Started ShoppingmallAuthBootApplication in 2.953 seconds (JVM running for 3.894)

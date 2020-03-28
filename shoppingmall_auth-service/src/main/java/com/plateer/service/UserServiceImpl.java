@@ -1,5 +1,6 @@
 package com.plateer.service;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.plateer.UserDao;
 import com.plateer.domain.User;
 import org.mindrot.jbcrypt.BCrypt;
@@ -12,9 +13,11 @@ import java.util.Optional;
 public class UserServiceImpl implements UserService {
 
     private UserDao userDao;
+    private JwtService jwtService;
 
-    public UserServiceImpl(UserDao userDao) {
+    public UserServiceImpl(UserDao userDao, JwtService jwtService) {
         this.userDao = userDao;
+        this.jwtService = jwtService;
     }
 
     @Override
@@ -44,16 +47,9 @@ public class UserServiceImpl implements UserService {
         return msg;
     }
 
-    @Override
-    public User signin(String email, String password) {
-//        UserDto users = usersRepository.findByEmail(email);
-//        Objects.requireNonNull(users, SIGNIN_EXCEPTION_MSG);
-//
-//        if( ! this.isAccordPassword(users, password)){
-//            throw new IllegalStateException(SIGNIN_EXCEPTION_MSG);
-//        }
-
-        return new User(email, "1234", "danbi", "phoneNumber", null, null, null, null, false, false);
+    public User getCurrentUserInfo(){
+        ObjectMapper objectMapper = new ObjectMapper();
+        User test = objectMapper.convertValue(jwtService.get("member"),User.class);
+        return test;
     }
-
 }

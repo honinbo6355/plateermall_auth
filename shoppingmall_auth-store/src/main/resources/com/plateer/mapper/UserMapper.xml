@@ -10,10 +10,6 @@
         #{password},
         #{name},
         #{phoneNumber},
-        #{firstAddress},
-        #{secondAddress},
-        #{thirdAddress},
-        #{mainAddress},
         #{smsAgree},
         #{emailAgree})
     </insert>
