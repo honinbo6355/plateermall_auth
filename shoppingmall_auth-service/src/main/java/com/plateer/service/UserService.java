@@ -10,4 +10,6 @@ public interface UserService {
     String validateUser(User user);
 
     User getCurrentUserInfo();
+
+    void updateUserInfo(User user);
 }

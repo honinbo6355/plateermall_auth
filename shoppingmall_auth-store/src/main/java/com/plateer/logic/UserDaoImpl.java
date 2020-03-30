@@ -21,4 +21,8 @@ public class UserDaoImpl implements UserDao {
     public User getUserByEmail(String email) {
         return userMapper.getUserByEmail(email);
     }
+
+    public void updateUser(User user) {
+        userMapper.update(user);
+    }
 }

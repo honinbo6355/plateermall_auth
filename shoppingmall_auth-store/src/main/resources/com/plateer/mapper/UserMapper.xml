@@ -20,4 +20,12 @@
         email = #{email}
     </select>
 
+    <update id="update" parameterType="com.plateer.domain.User">
+        update `user`
+        set
+        password = #{password},
+        phoneNumber = #{phoneNumber},
+        smsAgree = #{smsAgree},
+        emailAgree = #{emailAgree}
+    </update>
 </mapper>

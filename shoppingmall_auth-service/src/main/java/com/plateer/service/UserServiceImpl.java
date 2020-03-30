@@ -52,4 +52,10 @@ public class UserServiceImpl implements UserService {
         User test = objectMapper.convertValue(jwtService.get("member"),User.class);
         return test;
     }
+
+    @Override
+    public void updateUserInfo(User user) {
+        user.setPassword(BCrypt.hashpw(user.getPassword(), BCrypt.gensalt()));
+        userDao.updateUser(user);
+    }
 }

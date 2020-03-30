@@ -52,4 +52,9 @@ public class UserController {
     public User getCurrentUserInfo() {
         return userService.getCurrentUserInfo();
     }
+
+    @PutMapping("/updateUserInfo")
+    public void updateUserInfo(@RequestBody User user){
+        userService.updateUserInfo(user);
+    }
 }

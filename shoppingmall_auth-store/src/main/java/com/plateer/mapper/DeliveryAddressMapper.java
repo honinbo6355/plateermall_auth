@@ -9,4 +9,8 @@ import java.util.List;
 public interface DeliveryAddressMapper {
     void add(DeliveryAddress deliveryAddress);
     List<DeliveryAddress> list(String userEmail);
+    void delete(int id);
+    void update(DeliveryAddress deliveryAddress);
+    void setDefault(int id);
+    void setAllDefaultFalse(String userEmail);
 }

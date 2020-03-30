@@ -16,7 +16,7 @@ import java.util.List;
         exposedHeaders = {"Access-Control-Allow-Origin", "Access-Control-Allow-Credentials"}, maxAge = 3000)
 public class DeliveryAddressController {
 
-    DeliveryAddressService deliveryAddressService;
+    private DeliveryAddressService deliveryAddressService;
 
     public DeliveryAddressController(DeliveryAddressService deliveryAddressService){
         this.deliveryAddressService = deliveryAddressService;
@@ -30,5 +30,20 @@ public class DeliveryAddressController {
     @GetMapping("/list")
     public List<DeliveryAddress> listAddress(){
         return deliveryAddressService.deliveryAddressList();
+    }
+
+    @DeleteMapping("/delete/{id}")
+    public void deleteAddress(@PathVariable int id){
+        deliveryAddressService.deleteDeliveryAddress(id);
+    }
+
+    @PutMapping("/update")
+    public void updateAddress(@RequestBody DeliveryAddress deliveryAddress){
+        deliveryAddressService.updateDeliveryAddress(deliveryAddress);
+    }
+
+    @GetMapping("/setDefaultAddr/{id}")
+    public void setDefaultAddress(@RequestParam int id){
+        deliveryAddressService.setDefaultAddress(id);
     }
 }

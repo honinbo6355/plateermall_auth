@@ -7,4 +7,5 @@ import org.apache.ibatis.annotations.Mapper;
 public interface UserMapper {
     void signUp(User user);
     User getUserByEmail(String email);
+    void update(User user);
 }

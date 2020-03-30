@@ -33,4 +33,35 @@
         where
         userEmail = #{userEmail}
     </select>
+    <delete id="delete">
+        delete * from deliveryAddress
+        where
+        id = #{id}
+    </delete>
+    <update id="update" parameterType="com.plateer.domain.DeliveryAddress">
+        update deliveryAddress
+        set
+        reveiver = #{receiver},
+        spotAlias = #{spotAlias},
+        contatctNumber = #{contactNumber},
+        phoneNumber = #{phoneNumber},
+        roadAddress = #{roadAddress},
+        zipcodeAddress = #{zipcodeAddress},
+        remainAddress = #{reamainAddress}
+        where id = #{id}
+    </update>
+    <update id="setDefault">
+        update deliveryAddress
+        set
+        isDefault = true
+        where
+        id = #{id}
+    </update>
+    <update id="setAllDefaultFalse">
+        update deliveryAddress
+        set
+        isDefault = false
+        where
+        userEmail = #{userEmail}
+    </update>
 </mapper>

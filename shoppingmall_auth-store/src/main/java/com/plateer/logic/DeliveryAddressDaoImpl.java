@@ -24,4 +24,20 @@ public class DeliveryAddressDaoImpl implements DeliveryAddressDao {
         return deliveryAddressMapper.list(userEmail);
     }
 
+    public void deleteDeliveryAddress(int id) {
+        deliveryAddressMapper.delete(id);
+    }
+
+    public void updateDeliveryAddress(DeliveryAddress deliveryAddress) {
+        deliveryAddressMapper.update(deliveryAddress);
+    }
+
+    public void setDefaultAddress(int id) {
+        deliveryAddressMapper.setDefault(id);
+    }
+
+    public void setAllDefaultFalse(String userEmail) {
+        deliveryAddressMapper.setAllDefaultFalse(userEmail);
+    }
+
 }
