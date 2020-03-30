@@ -52,28 +52,4 @@ public class UserController {
     public User getCurrentUserInfo() {
         return userService.getCurrentUserInfo();
     }
-
-//    @GetMapping
-//    public LoginDto getUser() {
-//        long memberId = jwtService.getMemberId();
-//        //Optional<UserDto> loginUsers = userRepository.findById(memberId);
-//        return modelMapper.map(new User("eks4116@gmail.com", "danbi", "password", "01047264128"), LoginDto.class);
-//    }
-
-    /**
-     * Vue페이지에서 router & axios 호출 후 interceptor로 token 유효성확인
-     * @param token
-     * @return
-     */
-//    @PostMapping("/getUser")
-//    public User getUserFromClient(@RequestBody String token) {
-//        log.info("/getUserFromClient 실행실행");
-//        Map<String, Object> result = jwtService.get("member", token);
-//
-//        return null;
-//    }
-//
-//
-
-
 }

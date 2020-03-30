@@ -3271,3 +3271,13 @@ java.lang.NullPointerException: null
 835  [main] INFO  c.p.ShoppingmallAuthBootApplication - The following profiles are active: dev
 2799 [main] INFO  com.plateer.config.DB - MariaDB Connector/J
 3250 [main] INFO  c.p.ShoppingmallAuthBootApplication - Started ShoppingmallAuthBootApplication in 2.953 seconds (JVM running for 3.894)
+1243 [main] INFO  c.p.ShoppingmallAuthBootApplication - Starting ShoppingmallAuthBootApplication on DESKTOP-BUNNS1P with PID 4852 (D:\workspace\shopping_auth\shoppingmall_auth-boot\target\classes started by danbi in D:\workspace\shopping_auth)
+1253 [main] DEBUG c.p.ShoppingmallAuthBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+1253 [main] INFO  c.p.ShoppingmallAuthBootApplication - The following profiles are active: dev
+3762 [main] INFO  com.plateer.config.DB - MariaDB Connector/J
+4326 [main] INFO  c.p.ShoppingmallAuthBootApplication - Started ShoppingmallAuthBootApplication in 3.884 seconds (JVM running for 5.483)
+1075 [main] INFO  c.p.ShoppingmallAuthBootApplication - Starting ShoppingmallAuthBootApplication on DESKTOP-BUNNS1P with PID 6436 (D:\workspace\shopping_auth\shoppingmall_auth-boot\target\classes started by danbi in D:\workspace\shopping_auth)
+1075 [main] DEBUG c.p.ShoppingmallAuthBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+1075 [main] INFO  c.p.ShoppingmallAuthBootApplication - The following profiles are active: dev
+3386 [main] INFO  com.plateer.config.DB - MariaDB Connector/J
+3824 [main] INFO  c.p.ShoppingmallAuthBootApplication - Started ShoppingmallAuthBootApplication in 3.401 seconds (JVM running for 4.693)
