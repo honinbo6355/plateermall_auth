@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.plateer.mapper.DeliveryAddressMapper">
-    <insert id="addDeliveryAddress" parameterType="com.plateer.domain.DeliveryAddress">
+    <insert id="add" parameterType="com.plateer.domain.DeliveryAddress">
         insert into deliveryAddress
         (
         isDefault,
@@ -17,7 +17,7 @@
         remainAddress
         )
         values (
-        #{type},
+        #{isDefault},
         #{userEmail},
         #{receiver},
         #{spotAlias},
@@ -28,4 +28,9 @@
         #{remainAddress}
         )
     </insert>
+    <select id="list" resultType="com.plateer.domain.DeliveryAddress">
+        select * from deliveryAddress
+        where
+        userEmail = #{userEmail}
+    </select>
 </mapper>

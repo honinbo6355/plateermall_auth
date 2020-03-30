@@ -5,12 +5,14 @@ import com.plateer.service.DeliveryAddressService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @Slf4j
 @RestController
 @RequestMapping("/api/address")
 @CrossOrigin(allowCredentials = "true", origins = {"*"}, methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.DELETE, RequestMethod.PUT},
         allowedHeaders = {"Content-Type", "X-Requested-With", "accept", "Origin", "Access-Control-Request-Method",
-                "Access-Control-Request-Headers", "Access-Control-Allow-Origin", "Set-Cookie", "Authorization"},
+                "Access-Control-Request-Headers", "Access-Control-Allow-Origin", "Authorization"},
         exposedHeaders = {"Access-Control-Allow-Origin", "Access-Control-Allow-Credentials"}, maxAge = 3000)
 public class DeliveryAddressController {
 
@@ -25,4 +27,8 @@ public class DeliveryAddressController {
         deliveryAddressService.addDeliveryAddress(deliveryAddress);
     }
 
+    @GetMapping("/list")
+    public List<DeliveryAddress> listAddress(){
+        return deliveryAddressService.deliveryAddressList();
+    }
 }

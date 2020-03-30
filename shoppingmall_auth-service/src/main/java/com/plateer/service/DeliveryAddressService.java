@@ -2,7 +2,9 @@ package com.plateer.service;
 
 import com.plateer.domain.DeliveryAddress;
 
-public interface DeliveryAddressService {
+import java.util.List;
 
+public interface DeliveryAddressService {
     void addDeliveryAddress(DeliveryAddress deliveryAddress);
+    List<DeliveryAddress> deliveryAddressList();
 }

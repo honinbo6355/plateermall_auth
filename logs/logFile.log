@@ -3281,3 +3281,959 @@ java.lang.NullPointerException: null
 1075 [main] INFO  c.p.ShoppingmallAuthBootApplication - The following profiles are active: dev
 3386 [main] INFO  com.plateer.config.DB - MariaDB Connector/J
 3824 [main] INFO  c.p.ShoppingmallAuthBootApplication - Started ShoppingmallAuthBootApplication in 3.401 seconds (JVM running for 4.693)
+8449471 [http-nio-9999-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.plateer.service.JwtServiceImpl.get(JwtServiceImpl.java:64)
+	at com.plateer.service.UserServiceImpl.getCurrentUserInfo(UserServiceImpl.java:52)
+	at com.plateer.controller.UserController.getCurrentUserInfo(UserController.java:53)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+8449518 [http-nio-9999-exec-1] INFO  com.plateer.config.JwtInterceptor - JWT 인터셉터!!!!!!!!!!!!!POSTHANDLE
+8568090 [http-nio-9999-exec-3] DEBUG c.p.m.UserMapper.getUserByEmail - ==>  Preparing: select * from `user` where email = ? 
+8568100 [http-nio-9999-exec-3] DEBUG c.p.m.UserMapper.getUserByEmail - ==> Parameters: leesk1997@naver.com(String)
+8568131 [http-nio-9999-exec-3] DEBUG c.p.m.UserMapper.getUserByEmail - <==      Total: 1
+8568229 [http-nio-9999-exec-3] DEBUG c.p.m.UserMapper.getUserByEmail - ==>  Preparing: select * from `user` where email = ? 
+8568229 [http-nio-9999-exec-3] DEBUG c.p.m.UserMapper.getUserByEmail - ==> Parameters: leesk1997@naver.com(String)
+8568236 [http-nio-9999-exec-3] DEBUG c.p.m.UserMapper.getUserByEmail - <==      Total: 1
+10101736 [http-nio-9999-exec-6] INFO  com.plateer.config.JwtInterceptor - JWT 인터셉터!!!!!!!!!!!!!POSTHANDLE
+1080 [main] INFO  c.p.ShoppingmallAuthBootApplication - Starting ShoppingmallAuthBootApplication on DESKTOP-BUNNS1P with PID 13464 (D:\workspace\shopping_auth\shoppingmall_auth-boot\target\classes started by danbi in D:\workspace\shopping_auth)
+1080 [main] DEBUG c.p.ShoppingmallAuthBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+1080 [main] INFO  c.p.ShoppingmallAuthBootApplication - The following profiles are active: dev
+3609 [main] INFO  com.plateer.config.DB - MariaDB Connector/J
+4075 [main] INFO  c.p.ShoppingmallAuthBootApplication - Started ShoppingmallAuthBootApplication in 3.693 seconds (JVM running for 4.899)
+15843 [http-nio-9999-exec-2] DEBUG c.p.m.D.addDeliveryAddress - ==>  Preparing: insert into deliveryAddress ( isDefault, userEmail, receiver, spotAlias, contactNumber, phoneNumber, roadAddress, zipcodeAddress, remainAddress ) values ( ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+15864 [http-nio-9999-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'type' in 'class com.plateer.domain.DeliveryAddress'] with root cause
+org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'type' in 'class com.plateer.domain.DeliveryAddress'
+	at org.apache.ibatis.reflection.Reflector.getGetInvoker(Reflector.java:373)
+	at org.apache.ibatis.reflection.MetaClass.getGetInvoker(MetaClass.java:163)
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.getBeanProperty(BeanWrapper.java:162)
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.get(BeanWrapper.java:49)
+	at org.apache.ibatis.reflection.MetaObject.getValue(MetaObject.java:122)
+	at org.apache.ibatis.scripting.defaults.DefaultParameterHandler.setParameters(DefaultParameterHandler.java:79)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.parameterize(PreparedStatementHandler.java:94)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.parameterize(RoutingStatementHandler.java:64)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:88)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:49)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	at com.sun.proxy.$Proxy72.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:271)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:144)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at com.sun.proxy.$Proxy73.addDeliveryAddress(Unknown Source)
+	at com.plateer.logic.DeliveryAddressDaoImpl.addDeliveryAddress(DeliveryAddressDaoImpl.java:18)
+	at com.plateer.logic.DeliveryAddressDaoImpl$$FastClassBySpringCGLIB$$77eb381a.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:769)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689)
+	at com.plateer.logic.DeliveryAddressDaoImpl$$EnhancerBySpringCGLIB$$fdbf45d3.addDeliveryAddress(<generated>)
+	at com.plateer.service.DeliveryAddressServiceImpl.addDeliveryAddress(DeliveryAddressServiceImpl.java:18)
+	at com.plateer.controller.DeliveryAddressController.addAddress(DeliveryAddressController.java:25)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+1234 [main] INFO  c.p.ShoppingmallAuthBootApplication - Starting ShoppingmallAuthBootApplication on DESKTOP-BUNNS1P with PID 7608 (D:\workspace\shopping_auth\shoppingmall_auth-boot\target\classes started by danbi in D:\workspace\shopping_auth)
+1242 [main] DEBUG c.p.ShoppingmallAuthBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+1242 [main] INFO  c.p.ShoppingmallAuthBootApplication - The following profiles are active: dev
+3804 [main] INFO  com.plateer.config.DB - MariaDB Connector/J
+4268 [main] INFO  c.p.ShoppingmallAuthBootApplication - Started ShoppingmallAuthBootApplication in 3.897 seconds (JVM running for 5.261)
+17438 [http-nio-9999-exec-2] DEBUG c.p.m.D.addDeliveryAddress - ==>  Preparing: insert into deliveryAddress ( isDefault, userEmail, receiver, spotAlias, contactNumber, phoneNumber, roadAddress, zipcodeAddress, remainAddress ) values ( ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+17454 [http-nio-9999-exec-2] DEBUG c.p.m.D.addDeliveryAddress - ==> Parameters: false(Boolean), leesk1997@naver.com(String), 김나리(String), 나리네집(String), 01012341234(String), 01012341234(String), 서울 강남구 강남대로 708(String), 서울 강남구 압구정동 386-1(String), 1층(String)
+17476 [http-nio-9999-exec-2] DEBUG c.p.m.D.addDeliveryAddress - <==    Updates: 1
+89392 [http-nio-9999-exec-6] DEBUG c.p.m.D.addDeliveryAddress - ==>  Preparing: insert into deliveryAddress ( isDefault, userEmail, receiver, spotAlias, contactNumber, phoneNumber, roadAddress, zipcodeAddress, remainAddress ) values ( ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+89394 [http-nio-9999-exec-6] DEBUG c.p.m.D.addDeliveryAddress - ==> Parameters: false(Boolean), leesk1997@naver.com(String), 최단비(String), 단비네집(String), 01012341234(String), 01012341234(String), 서울 강남구 양재대로 333(String), 서울 강남구 개포동 1163-8(String), 3층(String)
+89406 [http-nio-9999-exec-6] DEBUG c.p.m.D.addDeliveryAddress - <==    Updates: 1
+1099 [main] INFO  c.p.ShoppingmallAuthBootApplication - Starting ShoppingmallAuthBootApplication on DESKTOP-BUNNS1P with PID 10548 (D:\workspace\shopping_auth\shoppingmall_auth-boot\target\classes started by danbi in D:\workspace\shopping_auth)
+1102 [main] DEBUG c.p.ShoppingmallAuthBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+1102 [main] INFO  c.p.ShoppingmallAuthBootApplication - The following profiles are active: dev
+3416 [main] INFO  com.plateer.config.DB - MariaDB Connector/J
+3871 [main] INFO  c.p.ShoppingmallAuthBootApplication - Started ShoppingmallAuthBootApplication in 3.443 seconds (JVM running for 4.664)
+10739 [http-nio-9999-exec-2] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+10759 [http-nio-9999-exec-2] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: leesk1997@naver.com(String)
+10793 [http-nio-9999-exec-2] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 2
+71970 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+71970 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: leesk1997@naver.com(String)
+71979 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 2
+214520 [http-nio-9999-exec-10] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+214521 [http-nio-9999-exec-10] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: leesk1997@naver.com(String)
+214531 [http-nio-9999-exec-10] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 2
+282430 [http-nio-9999-exec-4] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+282431 [http-nio-9999-exec-4] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: leesk1997@naver.com(String)
+282439 [http-nio-9999-exec-4] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 2
+341917 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+341918 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: leesk1997@naver.com(String)
+341925 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 2
+349425 [http-nio-9999-exec-8] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+349426 [http-nio-9999-exec-8] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: leesk1997@naver.com(String)
+349435 [http-nio-9999-exec-8] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 2
+417198 [http-nio-9999-exec-1] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+417199 [http-nio-9999-exec-1] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: leesk1997@naver.com(String)
+417206 [http-nio-9999-exec-1] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 2
+420374 [http-nio-9999-exec-4] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+420374 [http-nio-9999-exec-4] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: leesk1997@naver.com(String)
+420388 [http-nio-9999-exec-4] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 2
+535582 [http-nio-9999-exec-8] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+535582 [http-nio-9999-exec-8] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: leesk1997@naver.com(String)
+535588 [http-nio-9999-exec-8] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 2
+572271 [http-nio-9999-exec-10] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+572271 [http-nio-9999-exec-10] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: leesk1997@naver.com(String)
+572285 [http-nio-9999-exec-10] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 2
+614173 [http-nio-9999-exec-1] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+614173 [http-nio-9999-exec-1] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: leesk1997@naver.com(String)
+614179 [http-nio-9999-exec-1] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 2
+623290 [http-nio-9999-exec-4] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+623290 [http-nio-9999-exec-4] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: leesk1997@naver.com(String)
+623295 [http-nio-9999-exec-4] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 2
+643844 [http-nio-9999-exec-5] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+643844 [http-nio-9999-exec-5] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: leesk1997@naver.com(String)
+643853 [http-nio-9999-exec-5] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 2
+646521 [http-nio-9999-exec-8] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+646522 [http-nio-9999-exec-8] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: leesk1997@naver.com(String)
+646528 [http-nio-9999-exec-8] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 2
+701725 [http-nio-9999-exec-10] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+701725 [http-nio-9999-exec-10] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: leesk1997@naver.com(String)
+701730 [http-nio-9999-exec-10] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 2
+1027175 [http-nio-9999-exec-4] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+1027178 [http-nio-9999-exec-4] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: leesk1997@naver.com(String)
+1027182 [http-nio-9999-exec-4] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 2
+1029602 [http-nio-9999-exec-5] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+1029603 [http-nio-9999-exec-5] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: leesk1997@naver.com(String)
+1029613 [http-nio-9999-exec-5] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 2
+1051041 [http-nio-9999-exec-8] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+1051042 [http-nio-9999-exec-8] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: leesk1997@naver.com(String)
+1051054 [http-nio-9999-exec-8] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 2
+1413950 [http-nio-9999-exec-1] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+1413952 [http-nio-9999-exec-1] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: leesk1997@naver.com(String)
+1413959 [http-nio-9999-exec-1] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 2
+1367 [main] INFO  c.p.ShoppingmallAuthBootApplication - Starting ShoppingmallAuthBootApplication on DESKTOP-BUNNS1P with PID 12112 (D:\workspace\shopping_auth\shoppingmall_auth-boot\target\classes started by danbi in D:\workspace\shopping_auth)
+1369 [main] DEBUG c.p.ShoppingmallAuthBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+1369 [main] INFO  c.p.ShoppingmallAuthBootApplication - The following profiles are active: dev
+3890 [main] INFO  com.plateer.config.DB - MariaDB Connector/J
+4523 [main] INFO  c.p.ShoppingmallAuthBootApplication - Started ShoppingmallAuthBootApplication in 3.869 seconds (JVM running for 6.182)
+76372 [http-nio-9999-exec-2] INFO  com.plateer.config.JwtInterceptor - JWT 인터셉터!!!!!!!!!!!!!
+263363 [http-nio-9999-exec-1] INFO  com.plateer.config.JwtInterceptor - JWT 인터셉터!!!!!!!!!!!!!
+1111 [main] INFO  c.p.ShoppingmallAuthBootApplication - Starting ShoppingmallAuthBootApplication on DESKTOP-BUNNS1P with PID 3612 (D:\workspace\shopping_auth\shoppingmall_auth-boot\target\classes started by danbi in D:\workspace\shopping_auth)
+1111 [main] DEBUG c.p.ShoppingmallAuthBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+1119 [main] INFO  c.p.ShoppingmallAuthBootApplication - The following profiles are active: dev
+4865 [main] INFO  com.plateer.config.DB - MariaDB Connector/J
+5326 [main] INFO  c.p.ShoppingmallAuthBootApplication - Started ShoppingmallAuthBootApplication in 4.96 seconds (JVM running for 6.148)
+9248 [http-nio-9999-exec-2] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+9265 [http-nio-9999-exec-2] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: leesk1997@naver.com(String)
+9285 [http-nio-9999-exec-2] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 2
+34748 [http-nio-9999-exec-4] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+34749 [http-nio-9999-exec-4] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: leesk1997@naver.com(String)
+34756 [http-nio-9999-exec-4] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 2
+87620 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+87620 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: leesk1997@naver.com(String)
+87627 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 2
+129472 [http-nio-9999-exec-8] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+129472 [http-nio-9999-exec-8] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: leesk1997@naver.com(String)
+129479 [http-nio-9999-exec-8] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 2
+231636 [http-nio-9999-exec-2] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+231637 [http-nio-9999-exec-2] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: leesk1997@naver.com(String)
+231643 [http-nio-9999-exec-2] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 2
+232797 [http-nio-9999-exec-4] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+232798 [http-nio-9999-exec-4] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: leesk1997@naver.com(String)
+232809 [http-nio-9999-exec-4] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 2
+380708 [http-nio-9999-exec-8] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+380708 [http-nio-9999-exec-8] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: leesk1997@naver.com(String)
+380724 [http-nio-9999-exec-8] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 2
+870485 [http-nio-9999-exec-2] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+870485 [http-nio-9999-exec-2] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: leesk1997@naver.com(String)
+870516 [http-nio-9999-exec-2] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 2
+990477 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+990477 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: leesk1997@naver.com(String)
+990488 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 2
+1007414 [http-nio-9999-exec-8] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+1007415 [http-nio-9999-exec-8] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: leesk1997@naver.com(String)
+1007423 [http-nio-9999-exec-8] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 2
+1097327 [http-nio-9999-exec-2] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+1097328 [http-nio-9999-exec-2] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: leesk1997@naver.com(String)
+1097335 [http-nio-9999-exec-2] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 2
+1125994 [http-nio-9999-exec-4] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+1125994 [http-nio-9999-exec-4] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: leesk1997@naver.com(String)
+1126001 [http-nio-9999-exec-4] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 2
+1152866 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+1152867 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: leesk1997@naver.com(String)
+1152874 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 2
+1169272 [http-nio-9999-exec-8] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+1169272 [http-nio-9999-exec-8] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: leesk1997@naver.com(String)
+1169279 [http-nio-9999-exec-8] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 2
+1192741 [http-nio-9999-exec-10] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+1192742 [http-nio-9999-exec-10] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: leesk1997@naver.com(String)
+1192748 [http-nio-9999-exec-10] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 2
+1195330 [http-nio-9999-exec-2] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+1195332 [http-nio-9999-exec-2] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: leesk1997@naver.com(String)
+1195340 [http-nio-9999-exec-2] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 2
+1120 [main] INFO  c.p.ShoppingmallAuthBootApplication - Starting ShoppingmallAuthBootApplication on DESKTOP-BUNNS1P with PID 1996 (D:\workspace\shopping_auth\shoppingmall_auth-boot\target\classes started by danbi in D:\workspace\shopping_auth)
+1123 [main] DEBUG c.p.ShoppingmallAuthBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+1123 [main] INFO  c.p.ShoppingmallAuthBootApplication - The following profiles are active: dev
+3796 [main] INFO  com.plateer.config.DB - MariaDB Connector/J
+4385 [main] INFO  c.p.ShoppingmallAuthBootApplication - Started ShoppingmallAuthBootApplication in 3.923 seconds (JVM running for 5.36)
+57153 [http-nio-9999-exec-2] DEBUG c.p.m.UserMapper.getUserByEmail - ==>  Preparing: select * from `user` where email = ? 
+57153 [http-nio-9999-exec-2] DEBUG c.p.m.UserMapper.getUserByEmail - ==> Parameters: leesk1997@naver.com(String)
+57175 [http-nio-9999-exec-2] DEBUG c.p.m.UserMapper.getUserByEmail - <==      Total: 1
+57276 [http-nio-9999-exec-2] DEBUG c.p.m.UserMapper.getUserByEmail - ==>  Preparing: select * from `user` where email = ? 
+57276 [http-nio-9999-exec-2] DEBUG c.p.m.UserMapper.getUserByEmail - ==> Parameters: leesk1997@naver.com(String)
+57276 [http-nio-9999-exec-2] DEBUG c.p.m.UserMapper.getUserByEmail - <==      Total: 1
+1514 [main] INFO  c.p.ShoppingmallAuthBootApplication - Starting ShoppingmallAuthBootApplication on DESKTOP-BUNNS1P with PID 9696 (D:\workspace\shopping_auth\shoppingmall_auth-boot\target\classes started by danbi in D:\workspace\shopping_auth)
+1527 [main] DEBUG c.p.ShoppingmallAuthBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+1527 [main] INFO  c.p.ShoppingmallAuthBootApplication - The following profiles are active: dev
+4869 [main] INFO  com.plateer.config.DB - MariaDB Connector/J
+5486 [main] INFO  c.p.ShoppingmallAuthBootApplication - Started ShoppingmallAuthBootApplication in 4.931 seconds (JVM running for 7.125)
+1006155 [http-nio-9999-exec-3] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+1006193 [http-nio-9999-exec-3] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: leesk1997@naver.com(String)
+1006240 [http-nio-9999-exec-3] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 2
+1383 [main] INFO  c.p.ShoppingmallAuthBootApplication - Starting ShoppingmallAuthBootApplication on DESKTOP-BUNNS1P with PID 13216 (D:\workspace\shopping_auth\shoppingmall_auth-boot\target\classes started by danbi in D:\workspace\shopping_auth)
+1391 [main] DEBUG c.p.ShoppingmallAuthBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+1391 [main] INFO  c.p.ShoppingmallAuthBootApplication - The following profiles are active: dev
+4343 [main] INFO  com.plateer.config.DB - MariaDB Connector/J
+4960 [main] INFO  c.p.ShoppingmallAuthBootApplication - Started ShoppingmallAuthBootApplication in 4.432 seconds (JVM running for 6.274)
+25879 [http-nio-9999-exec-2] INFO  com.plateer.config.JwtInterceptor - JWT 인터셉터!!!!!!!!!!!!!
+1331 [main] INFO  c.p.ShoppingmallAuthBootApplication - Starting ShoppingmallAuthBootApplication on DESKTOP-BUNNS1P with PID 10256 (D:\workspace\shopping_auth\shoppingmall_auth-boot\target\classes started by danbi in D:\workspace\shopping_auth)
+1331 [main] DEBUG c.p.ShoppingmallAuthBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+1331 [main] INFO  c.p.ShoppingmallAuthBootApplication - The following profiles are active: dev
+3921 [main] INFO  com.plateer.config.DB - MariaDB Connector/J
+4639 [main] INFO  c.p.ShoppingmallAuthBootApplication - Started ShoppingmallAuthBootApplication in 4.048 seconds (JVM running for 5.822)
+726458 [http-nio-9999-exec-1] INFO  com.plateer.config.JwtInterceptor - JWT 인터셉터!!!!!!!!!!!!!
+1307 [main] INFO  c.p.ShoppingmallAuthBootApplication - Starting ShoppingmallAuthBootApplication on DESKTOP-BUNNS1P with PID 13464 (D:\workspace\shopping_auth\shoppingmall_auth-boot\target\classes started by danbi in D:\workspace\shopping_auth)
+1311 [main] DEBUG c.p.ShoppingmallAuthBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+1311 [main] INFO  c.p.ShoppingmallAuthBootApplication - The following profiles are active: dev
+4441 [main] INFO  com.plateer.config.DB - MariaDB Connector/J
+5056 [main] INFO  c.p.ShoppingmallAuthBootApplication - Started ShoppingmallAuthBootApplication in 4.538 seconds (JVM running for 6.13)
+283717 [http-nio-9999-exec-2] INFO  com.plateer.config.JwtInterceptor - JWT 인터셉터!!!!!!!!!!!!!
+397541 [http-nio-9999-exec-1] INFO  com.plateer.config.JwtInterceptor - JWT 인터셉터!!!!!!!!!!!!!
+398713 [http-nio-9999-exec-3] INFO  com.plateer.config.JwtInterceptor - JWT 인터셉터!!!!!!!!!!!!!
+1317 [main] INFO  c.p.ShoppingmallAuthBootApplication - Starting ShoppingmallAuthBootApplication on DESKTOP-BUNNS1P with PID 4116 (D:\workspace\shopping_auth\shoppingmall_auth-boot\target\classes started by danbi in D:\workspace\shopping_auth)
+1327 [main] DEBUG c.p.ShoppingmallAuthBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+1327 [main] INFO  c.p.ShoppingmallAuthBootApplication - The following profiles are active: dev
+4042 [main] INFO  com.plateer.config.DB - MariaDB Connector/J
+4634 [main] INFO  c.p.ShoppingmallAuthBootApplication - Started ShoppingmallAuthBootApplication in 4.157 seconds (JVM running for 5.766)
+130195 [http-nio-9999-exec-2] INFO  com.plateer.config.JwtInterceptor - JWT 인터셉터!!!!!!!!!!!!!
+1432 [main] INFO  c.p.ShoppingmallAuthBootApplication - Starting ShoppingmallAuthBootApplication on DESKTOP-BUNNS1P with PID 7992 (D:\workspace\shopping_auth\shoppingmall_auth-boot\target\classes started by danbi in D:\workspace\shopping_auth)
+1432 [main] DEBUG c.p.ShoppingmallAuthBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+1432 [main] INFO  c.p.ShoppingmallAuthBootApplication - The following profiles are active: dev
+4394 [main] INFO  com.plateer.config.DB - MariaDB Connector/J
+4995 [main] INFO  c.p.ShoppingmallAuthBootApplication - Started ShoppingmallAuthBootApplication in 4.499 seconds (JVM running for 6.089)
+142741 [http-nio-9999-exec-1] INFO  com.plateer.config.JwtInterceptor - JWT 인터셉터!!!!!!!!!!!!!
+156863 [http-nio-9999-exec-3] INFO  com.plateer.config.JwtInterceptor - JWT 인터셉터!!!!!!!!!!!!!
+263492 [http-nio-9999-exec-2] INFO  com.plateer.config.JwtInterceptor - JWT 인터셉터!!!!!!!!!!!!!
+578700 [http-nio-9999-exec-6] INFO  com.plateer.config.JwtInterceptor - JWT 인터셉터!!!!!!!!!!!!!
+579379 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+579404 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: leesk1997@naver.com(String)
+579458 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 2
+1165914 [http-nio-9999-exec-7] INFO  com.plateer.config.JwtInterceptor - JWT 인터셉터!!!!!!!!!!!!!
+1167044 [http-nio-9999-exec-9] INFO  com.plateer.config.JwtInterceptor - JWT 인터셉터!!!!!!!!!!!!!
+1167925 [http-nio-9999-exec-10] INFO  com.plateer.config.JwtInterceptor - JWT 인터셉터!!!!!!!!!!!!!
+1167925 [http-nio-9999-exec-8] INFO  com.plateer.config.JwtInterceptor - JWT 인터셉터!!!!!!!!!!!!!
+1167929 [http-nio-9999-exec-7] INFO  com.plateer.config.JwtInterceptor - JWT 인터셉터!!!!!!!!!!!!!
+1183469 [http-nio-9999-exec-2] INFO  com.plateer.config.JwtInterceptor - JWT 인터셉터!!!!!!!!!!!!!
+2214457 [http-nio-9999-exec-4] INFO  com.plateer.config.JwtInterceptor - JWT 인터셉터!!!!!!!!!!!!!
+1425 [main] INFO  c.p.ShoppingmallAuthBootApplication - Starting ShoppingmallAuthBootApplication on DESKTOP-BUNNS1P with PID 2820 (D:\workspace\shopping_auth\shoppingmall_auth-boot\target\classes started by danbi in D:\workspace\shopping_auth)
+1430 [main] DEBUG c.p.ShoppingmallAuthBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+1431 [main] INFO  c.p.ShoppingmallAuthBootApplication - The following profiles are active: dev
+4590 [main] INFO  com.plateer.config.DB - MariaDB Connector/J
+5242 [main] INFO  c.p.ShoppingmallAuthBootApplication - Started ShoppingmallAuthBootApplication in 4.73 seconds (JVM running for 6.312)
+49572 [http-nio-9999-exec-1] INFO  com.plateer.config.JwtInterceptor - JWT 인터셉터!!!!!!!!!!!!!
+52009 [http-nio-9999-exec-3] INFO  com.plateer.config.JwtInterceptor - JWT 인터셉터!!!!!!!!!!!!!
+66419 [http-nio-9999-exec-2] INFO  com.plateer.config.JwtInterceptor - JWT 인터셉터!!!!!!!!!!!!!
+627849 [http-nio-9999-exec-6] INFO  com.plateer.config.JwtInterceptor - JWT 인터셉터!!!!!!!!!!!!!
+628462 [http-nio-9999-exec-9] INFO  com.plateer.config.JwtInterceptor - JWT 인터셉터!!!!!!!!!!!!!
+628463 [http-nio-9999-exec-8] INFO  com.plateer.config.JwtInterceptor - JWT 인터셉터!!!!!!!!!!!!!
+628468 [http-nio-9999-exec-6] INFO  com.plateer.config.JwtInterceptor - JWT 인터셉터!!!!!!!!!!!!!
+776262 [http-nio-9999-exec-7] INFO  com.plateer.config.JwtInterceptor - JWT 인터셉터!!!!!!!!!!!!!
+776935 [http-nio-9999-exec-7] INFO  com.plateer.config.JwtInterceptor - JWT 인터셉터!!!!!!!!!!!!!
+777574 [http-nio-9999-exec-4] INFO  com.plateer.config.JwtInterceptor - JWT 인터셉터!!!!!!!!!!!!!
+864303 [http-nio-9999-exec-8] INFO  com.plateer.config.JwtInterceptor - JWT 인터셉터!!!!!!!!!!!!!
+960  [main] INFO  c.p.ShoppingmallAuthBootApplication - Starting ShoppingmallAuthBootApplication on DESKTOP-BUNNS1P with PID 2612 (D:\workspace\shopping_auth\shoppingmall_auth-boot\target\classes started by danbi in D:\workspace\shopping_auth)
+963  [main] DEBUG c.p.ShoppingmallAuthBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+963  [main] INFO  c.p.ShoppingmallAuthBootApplication - The following profiles are active: dev
+3247 [main] INFO  com.plateer.config.DB - MariaDB Connector/J
+3748 [main] INFO  c.p.ShoppingmallAuthBootApplication - Started ShoppingmallAuthBootApplication in 3.388 seconds (JVM running for 4.693)
+10730 [http-nio-9999-exec-3] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+10748 [http-nio-9999-exec-3] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: leesk1997@naver.com(String)
+10773 [http-nio-9999-exec-3] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 2
+99604 [http-nio-9999-exec-7] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+99605 [http-nio-9999-exec-7] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: leesk1997@naver.com(String)
+99613 [http-nio-9999-exec-7] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 2
+127456 [http-nio-9999-exec-9] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+127457 [http-nio-9999-exec-9] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: leesk1997@naver.com(String)
+127463 [http-nio-9999-exec-9] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 2
+1525537 [http-nio-9999-exec-2] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+1525538 [http-nio-9999-exec-2] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: leesk1997@naver.com(String)
+1525544 [http-nio-9999-exec-2] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 2
+1564206 [http-nio-9999-exec-5] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+1564207 [http-nio-9999-exec-5] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: leesk1997@naver.com(String)
+1564215 [http-nio-9999-exec-5] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 2
+1564215 [http-nio-9999-exec-1] DEBUG c.p.m.DeliveryAddressMapper.add - ==>  Preparing: insert into deliveryAddress ( isDefault, userEmail, receiver, spotAlias, contactNumber, phoneNumber, roadAddress, zipcodeAddress, remainAddress ) values ( ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+1564221 [http-nio-9999-exec-1] DEBUG c.p.m.DeliveryAddressMapper.add - ==> Parameters: false(Boolean), leesk1997@naver.com(String), 나윤주(String), 윤주네집(String), 01012341234(String), 01012341234(String), 서울 강동구 암사길 1(String), 서울 강동구 암사동 497-16(String), 3층(String)
+1564232 [http-nio-9999-exec-1] DEBUG c.p.m.DeliveryAddressMapper.add - <==    Updates: 1
+1576008 [http-nio-9999-exec-7] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.plateer.service.DeliveryAddressServiceImpl.deliveryAddressList(DeliveryAddressServiceImpl.java:28)
+	at com.plateer.controller.DeliveryAddressController.listAddress(DeliveryAddressController.java:32)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+1757243 [http-nio-9999-exec-4] DEBUG c.p.m.UserMapper.getUserByEmail - ==>  Preparing: select * from `user` where email = ? 
+1757243 [http-nio-9999-exec-4] DEBUG c.p.m.UserMapper.getUserByEmail - ==> Parameters: leesk1997@naver.com(String)
+1757257 [http-nio-9999-exec-4] DEBUG c.p.m.UserMapper.getUserByEmail - <==      Total: 1
+1757356 [http-nio-9999-exec-4] DEBUG c.p.m.UserMapper.getUserByEmail - ==>  Preparing: select * from `user` where email = ? 
+1757356 [http-nio-9999-exec-4] DEBUG c.p.m.UserMapper.getUserByEmail - ==> Parameters: leesk1997@naver.com(String)
+1757441 [http-nio-9999-exec-4] DEBUG c.p.m.UserMapper.getUserByEmail - <==      Total: 1
+1762217 [http-nio-9999-exec-3] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+1762218 [http-nio-9999-exec-3] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: leesk1997@naver.com(String)
+1762226 [http-nio-9999-exec-3] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 3
+1793467 [http-nio-9999-exec-1] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+1793467 [http-nio-9999-exec-1] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: leesk1997@naver.com(String)
+1793479 [http-nio-9999-exec-1] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 3
+1834000 [http-nio-9999-exec-7] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+1834001 [http-nio-9999-exec-7] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: leesk1997@naver.com(String)
+1834008 [http-nio-9999-exec-7] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 3
+1909823 [http-nio-9999-exec-4] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+1909823 [http-nio-9999-exec-4] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: leesk1997@naver.com(String)
+1909831 [http-nio-9999-exec-4] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 3
+3617124 [http-nio-9999-exec-1] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+3617124 [http-nio-9999-exec-1] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: leesk1997@naver.com(String)
+3617239 [http-nio-9999-exec-1] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: (conn=27850) Table 'NEWBIE.deliveryAddress' doesn't exist
+### The error may exist in file [D:\workspace\shopping_auth\shoppingmall_auth-store\target\classes\com\plateer\mapper\deliveryAddressMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select * from deliveryAddress         where         userEmail = ?
+### Cause: java.sql.SQLSyntaxErrorException: (conn=27850) Table 'NEWBIE.deliveryAddress' doesn't exist
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: (conn=27850) Table 'NEWBIE.deliveryAddress' doesn't exist] with root cause
+java.sql.SQLException: Table 'NEWBIE.deliveryAddress' doesn't exist
+	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.readErrorPacket(AbstractQueryProtocol.java:1674)
+	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.readPacket(AbstractQueryProtocol.java:1536)
+	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.getResult(AbstractQueryProtocol.java:1499)
+	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.executeQuery(AbstractQueryProtocol.java:359)
+	at org.mariadb.jdbc.ClientSidePreparedStatement.executeInternal(ClientSidePreparedStatement.java:217)
+	at org.mariadb.jdbc.ClientSidePreparedStatement.execute(ClientSidePreparedStatement.java:149)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy93.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	at com.sun.proxy.$Proxy73.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:144)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at com.sun.proxy.$Proxy74.list(Unknown Source)
+	at com.plateer.logic.DeliveryAddressDaoImpl.deliveryAddressList(DeliveryAddressDaoImpl.java:24)
+	at com.plateer.logic.DeliveryAddressDaoImpl$$FastClassBySpringCGLIB$$77eb381a.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:769)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689)
+	at com.plateer.logic.DeliveryAddressDaoImpl$$EnhancerBySpringCGLIB$$1bc37519.deliveryAddressList(<generated>)
+	at com.plateer.service.DeliveryAddressServiceImpl.deliveryAddressList(DeliveryAddressServiceImpl.java:28)
+	at com.plateer.controller.DeliveryAddressController.listAddress(DeliveryAddressController.java:32)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+3691886 [http-nio-9999-exec-9] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+3691886 [http-nio-9999-exec-9] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: leesk1997@naver.com(String)
+3691902 [http-nio-9999-exec-9] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: (conn=27850) Table 'NEWBIE.deliveryAddress' doesn't exist
+### The error may exist in file [D:\workspace\shopping_auth\shoppingmall_auth-store\target\classes\com\plateer\mapper\deliveryAddressMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select * from deliveryAddress         where         userEmail = ?
+### Cause: java.sql.SQLSyntaxErrorException: (conn=27850) Table 'NEWBIE.deliveryAddress' doesn't exist
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: (conn=27850) Table 'NEWBIE.deliveryAddress' doesn't exist] with root cause
+java.sql.SQLException: Table 'NEWBIE.deliveryAddress' doesn't exist
+	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.readErrorPacket(AbstractQueryProtocol.java:1674)
+	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.readPacket(AbstractQueryProtocol.java:1536)
+	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.getResult(AbstractQueryProtocol.java:1499)
+	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.executeQuery(AbstractQueryProtocol.java:359)
+	at org.mariadb.jdbc.ClientSidePreparedStatement.executeInternal(ClientSidePreparedStatement.java:217)
+	at org.mariadb.jdbc.ClientSidePreparedStatement.execute(ClientSidePreparedStatement.java:149)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy93.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	at com.sun.proxy.$Proxy73.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:144)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at com.sun.proxy.$Proxy74.list(Unknown Source)
+	at com.plateer.logic.DeliveryAddressDaoImpl.deliveryAddressList(DeliveryAddressDaoImpl.java:24)
+	at com.plateer.logic.DeliveryAddressDaoImpl$$FastClassBySpringCGLIB$$77eb381a.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:769)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689)
+	at com.plateer.logic.DeliveryAddressDaoImpl$$EnhancerBySpringCGLIB$$1bc37519.deliveryAddressList(<generated>)
+	at com.plateer.service.DeliveryAddressServiceImpl.deliveryAddressList(DeliveryAddressServiceImpl.java:28)
+	at com.plateer.controller.DeliveryAddressController.listAddress(DeliveryAddressController.java:32)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+3696669 [http-nio-9999-exec-10] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+3696670 [http-nio-9999-exec-10] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: leesk1997@naver.com(String)
+3696679 [http-nio-9999-exec-10] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: (conn=27850) Table 'NEWBIE.deliveryAddress' doesn't exist
+### The error may exist in file [D:\workspace\shopping_auth\shoppingmall_auth-store\target\classes\com\plateer\mapper\deliveryAddressMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select * from deliveryAddress         where         userEmail = ?
+### Cause: java.sql.SQLSyntaxErrorException: (conn=27850) Table 'NEWBIE.deliveryAddress' doesn't exist
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: (conn=27850) Table 'NEWBIE.deliveryAddress' doesn't exist] with root cause
+java.sql.SQLException: Table 'NEWBIE.deliveryAddress' doesn't exist
+	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.readErrorPacket(AbstractQueryProtocol.java:1674)
+	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.readPacket(AbstractQueryProtocol.java:1536)
+	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.getResult(AbstractQueryProtocol.java:1499)
+	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.executeQuery(AbstractQueryProtocol.java:359)
+	at org.mariadb.jdbc.ClientSidePreparedStatement.executeInternal(ClientSidePreparedStatement.java:217)
+	at org.mariadb.jdbc.ClientSidePreparedStatement.execute(ClientSidePreparedStatement.java:149)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy93.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	at com.sun.proxy.$Proxy73.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:144)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at com.sun.proxy.$Proxy74.list(Unknown Source)
+	at com.plateer.logic.DeliveryAddressDaoImpl.deliveryAddressList(DeliveryAddressDaoImpl.java:24)
+	at com.plateer.logic.DeliveryAddressDaoImpl$$FastClassBySpringCGLIB$$77eb381a.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:769)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689)
+	at com.plateer.logic.DeliveryAddressDaoImpl$$EnhancerBySpringCGLIB$$1bc37519.deliveryAddressList(<generated>)
+	at com.plateer.service.DeliveryAddressServiceImpl.deliveryAddressList(DeliveryAddressServiceImpl.java:28)
+	at com.plateer.controller.DeliveryAddressController.listAddress(DeliveryAddressController.java:32)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+3699757 [http-nio-9999-exec-3] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+3699758 [http-nio-9999-exec-3] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: leesk1997@naver.com(String)
+3699765 [http-nio-9999-exec-3] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: (conn=27850) Table 'NEWBIE.deliveryAddress' doesn't exist
+### The error may exist in file [D:\workspace\shopping_auth\shoppingmall_auth-store\target\classes\com\plateer\mapper\deliveryAddressMapper.xml]
+### The error may involve defaultParameterMap
+### The error occurred while setting parameters
+### SQL: select * from deliveryAddress         where         userEmail = ?
+### Cause: java.sql.SQLSyntaxErrorException: (conn=27850) Table 'NEWBIE.deliveryAddress' doesn't exist
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: (conn=27850) Table 'NEWBIE.deliveryAddress' doesn't exist] with root cause
+java.sql.SQLException: Table 'NEWBIE.deliveryAddress' doesn't exist
+	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.readErrorPacket(AbstractQueryProtocol.java:1674)
+	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.readPacket(AbstractQueryProtocol.java:1536)
+	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.getResult(AbstractQueryProtocol.java:1499)
+	at org.mariadb.jdbc.internal.protocol.AbstractQueryProtocol.executeQuery(AbstractQueryProtocol.java:359)
+	at org.mariadb.jdbc.ClientSidePreparedStatement.executeInternal(ClientSidePreparedStatement.java:217)
+	at org.mariadb.jdbc.ClientSidePreparedStatement.execute(ClientSidePreparedStatement.java:149)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy93.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	at com.sun.proxy.$Proxy73.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:144)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at com.sun.proxy.$Proxy74.list(Unknown Source)
+	at com.plateer.logic.DeliveryAddressDaoImpl.deliveryAddressList(DeliveryAddressDaoImpl.java:24)
+	at com.plateer.logic.DeliveryAddressDaoImpl$$FastClassBySpringCGLIB$$77eb381a.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:769)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:747)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689)
+	at com.plateer.logic.DeliveryAddressDaoImpl$$EnhancerBySpringCGLIB$$1bc37519.deliveryAddressList(<generated>)
+	at com.plateer.service.DeliveryAddressServiceImpl.deliveryAddressList(DeliveryAddressServiceImpl.java:28)
+	at com.plateer.controller.DeliveryAddressController.listAddress(DeliveryAddressController.java:32)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+1104 [main] INFO  c.p.ShoppingmallAuthBootApplication - Starting ShoppingmallAuthBootApplication on DESKTOP-BUNNS1P with PID 10440 (D:\workspace\shopping_auth\shoppingmall_auth-boot\target\classes started by danbi in D:\workspace\shopping_auth)
+1114 [main] DEBUG c.p.ShoppingmallAuthBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+1115 [main] INFO  c.p.ShoppingmallAuthBootApplication - The following profiles are active: dev
+3697 [main] INFO  com.plateer.config.DB - MariaDB Connector/J
+4312 [main] INFO  c.p.ShoppingmallAuthBootApplication - Started ShoppingmallAuthBootApplication in 3.903 seconds (JVM running for 5.443)
+123434 [http-nio-9999-exec-2] DEBUG c.plateer.mapper.UserMapper.signUp - ==>  Preparing: insert into `user` values ( ?, ?, ?, ?, ?, ?) 
+123448 [http-nio-9999-exec-2] DEBUG c.plateer.mapper.UserMapper.signUp - ==> Parameters: admin@(String), $2a$10$oJl8X4oJMO9/NtepxpNux.lrCd4wDIj9C9Hj3hiCo/hbKv63vIEpK(String), 관리자(String), 01012341234(String), false(Boolean), false(Boolean)
+123454 [http-nio-9999-exec-2] DEBUG c.plateer.mapper.UserMapper.signUp - <==    Updates: 1
+141542 [http-nio-9999-exec-4] DEBUG c.p.m.UserMapper.getUserByEmail - ==>  Preparing: select * from `user` where email = ? 
+141542 [http-nio-9999-exec-4] DEBUG c.p.m.UserMapper.getUserByEmail - ==> Parameters: admin@(String)
+141558 [http-nio-9999-exec-4] DEBUG c.p.m.UserMapper.getUserByEmail - <==      Total: 1
+141651 [http-nio-9999-exec-4] DEBUG c.p.m.UserMapper.getUserByEmail - ==>  Preparing: select * from `user` where email = ? 
+141652 [http-nio-9999-exec-4] DEBUG c.p.m.UserMapper.getUserByEmail - ==> Parameters: admin@(String)
+141656 [http-nio-9999-exec-4] DEBUG c.p.m.UserMapper.getUserByEmail - <==      Total: 1
+148416 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+148416 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: admin@(String)
+148421 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 0
+590017 [http-nio-9999-exec-9] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+590018 [http-nio-9999-exec-9] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: admin@(String)
+590025 [http-nio-9999-exec-9] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 0
+596138 [http-nio-9999-exec-1] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+596139 [http-nio-9999-exec-1] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: admin@(String)
+596147 [http-nio-9999-exec-1] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 0
+657302 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.add - ==>  Preparing: insert into deliveryAddress ( isDefault, userEmail, receiver, spotAlias, contactNumber, phoneNumber, roadAddress, zipcodeAddress, remainAddress ) values ( ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+657303 [http-nio-9999-exec-7] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+657303 [http-nio-9999-exec-7] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: admin@(String)
+657304 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.add - ==> Parameters: false(Boolean), admin@(String), 최단비(String), 단비네집(String), 01012341234(String), 01012341234(String), 서울 강남구 강남대로 708(String), 서울 강남구 압구정동 386-1(String), 1층(String)
+657309 [http-nio-9999-exec-7] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 0
+657309 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.add - <==    Updates: 1
+661971 [http-nio-9999-exec-9] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+661972 [http-nio-9999-exec-9] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: admin@(String)
+661980 [http-nio-9999-exec-9] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 1
+1131798 [http-nio-9999-exec-5] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+1131799 [http-nio-9999-exec-5] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: admin@(String)
+1131807 [http-nio-9999-exec-5] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 1
+1151398 [http-nio-9999-exec-7] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+1151398 [http-nio-9999-exec-7] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: admin@(String)
+1151405 [http-nio-9999-exec-7] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 1
+1222967 [http-nio-9999-exec-1] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+1222968 [http-nio-9999-exec-1] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: admin@(String)
+1222977 [http-nio-9999-exec-1] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 1
+1225333 [http-nio-9999-exec-3] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+1225333 [http-nio-9999-exec-3] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: admin@(String)
+1225339 [http-nio-9999-exec-3] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 1
+1241187 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.add - ==>  Preparing: insert into deliveryAddress ( isDefault, userEmail, receiver, spotAlias, contactNumber, phoneNumber, roadAddress, zipcodeAddress, remainAddress ) values ( ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+1241188 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.add - ==> Parameters: false(Boolean), admin@(String), ㅇㅇㅇ(String), ㅇㅇㅇ(String), ㅇㅇㅇ(String), ㅇㅇㅇ(String), 서울 강남구 논현로189길 6(String), 서울 강남구 압구정동 390(String), ㅇㅇㅇ(String)
+1241193 [http-nio-9999-exec-7] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+1241193 [http-nio-9999-exec-7] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: admin@(String)
+1241194 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.add - <==    Updates: 1
+1241200 [http-nio-9999-exec-7] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 2
+1293425 [http-nio-9999-exec-9] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? 
+1293426 [http-nio-9999-exec-9] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: admin@(String)
+1293434 [http-nio-9999-exec-9] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 2
