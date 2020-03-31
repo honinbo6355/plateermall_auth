@@ -2532,3 +2532,592 @@ java.lang.NullPointerException: null
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:748)
+482765 [http-nio-9999-exec-2] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.plateer.service.JwtServiceImpl.get(JwtServiceImpl.java:64)
+	at com.plateer.service.UserServiceImpl.getCurrentUserInfo(UserServiceImpl.java:52)
+	at com.plateer.controller.UserController.getCurrentUserInfo(UserController.java:53)
+	at sun.reflect.GeneratedMethodAccessor53.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+496601 [http-nio-9999-exec-5] DEBUG c.p.m.UserMapper.getUserByEmail - ==>  Preparing: select * from `user` where email = ? 
+496602 [http-nio-9999-exec-5] DEBUG c.p.m.UserMapper.getUserByEmail - ==> Parameters: dd@(String)
+496611 [http-nio-9999-exec-5] DEBUG c.p.m.UserMapper.getUserByEmail - <==      Total: 0
+653319 [http-nio-9999-exec-10] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.plateer.service.JwtServiceImpl.get(JwtServiceImpl.java:64)
+	at com.plateer.service.UserServiceImpl.getCurrentUserInfo(UserServiceImpl.java:52)
+	at com.plateer.controller.UserController.getCurrentUserInfo(UserController.java:53)
+	at sun.reflect.GeneratedMethodAccessor53.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+655483 [http-nio-9999-exec-9] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.plateer.service.JwtServiceImpl.get(JwtServiceImpl.java:64)
+	at com.plateer.service.UserServiceImpl.getCurrentUserInfo(UserServiceImpl.java:52)
+	at com.plateer.controller.UserController.getCurrentUserInfo(UserController.java:53)
+	at sun.reflect.GeneratedMethodAccessor53.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+656638 [http-nio-9999-exec-3] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.plateer.service.JwtServiceImpl.get(JwtServiceImpl.java:64)
+	at com.plateer.service.UserServiceImpl.getCurrentUserInfo(UserServiceImpl.java:52)
+	at com.plateer.controller.UserController.getCurrentUserInfo(UserController.java:53)
+	at sun.reflect.GeneratedMethodAccessor53.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+690523 [http-nio-9999-exec-5] DEBUG c.p.m.UserMapper.getUserByEmail - ==>  Preparing: select * from `user` where email = ? 
+690523 [http-nio-9999-exec-5] DEBUG c.p.m.UserMapper.getUserByEmail - ==> Parameters: 123123@(String)
+690533 [http-nio-9999-exec-5] DEBUG c.p.m.UserMapper.getUserByEmail - <==      Total: 1
+783836 [http-nio-9999-exec-1] DEBUG c.p.m.UserMapper.getUserByEmail - ==>  Preparing: select * from `user` where email = ? 
+783837 [http-nio-9999-exec-1] DEBUG c.p.m.UserMapper.getUserByEmail - ==> Parameters: testid@(String)
+783845 [http-nio-9999-exec-1] DEBUG c.p.m.UserMapper.getUserByEmail - <==      Total: 1
+783933 [http-nio-9999-exec-1] DEBUG c.p.m.UserMapper.getUserByEmail - ==>  Preparing: select * from `user` where email = ? 
+783933 [http-nio-9999-exec-1] DEBUG c.p.m.UserMapper.getUserByEmail - ==> Parameters: testid@(String)
+783949 [http-nio-9999-exec-1] DEBUG c.p.m.UserMapper.getUserByEmail - <==      Total: 1
+799119 [http-nio-9999-exec-3] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+799119 [http-nio-9999-exec-3] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid@(String)
+799127 [http-nio-9999-exec-3] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 0
+2333666 [http-nio-9999-exec-3] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+2333666 [http-nio-9999-exec-3] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid@(String)
+2333670 [http-nio-9999-exec-3] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 0
+2354366 [http-nio-9999-exec-8] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+2354366 [http-nio-9999-exec-8] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid@(String)
+2354366 [http-nio-9999-exec-8] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 0
+2451360 [http-nio-9999-exec-3] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+2451360 [http-nio-9999-exec-3] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid@(String)
+2451367 [http-nio-9999-exec-3] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 0
+2454246 [http-nio-9999-exec-3] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+2454246 [http-nio-9999-exec-3] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid@(String)
+2454254 [http-nio-9999-exec-3] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 0
+2466401 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+2466403 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid@(String)
+2466410 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 0
+2971004 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+2971004 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: 123123@(String)
+2971004 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 0
+2988478 [http-nio-9999-exec-8] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+2988478 [http-nio-9999-exec-8] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: 123123@(String)
+2988478 [http-nio-9999-exec-8] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 0
+3182110 [http-nio-9999-exec-1] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+3182110 [http-nio-9999-exec-1] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid@(String)
+3182116 [http-nio-9999-exec-1] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 0
+3580439 [http-nio-9999-exec-1] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+3580439 [http-nio-9999-exec-1] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid@(String)
+3580439 [http-nio-9999-exec-1] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 0
+3627169 [http-nio-9999-exec-9] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+3627171 [http-nio-9999-exec-9] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid@(String)
+3627178 [http-nio-9999-exec-9] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 0
+3654452 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+3654452 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid@(String)
+3654468 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 0
+3657112 [http-nio-9999-exec-8] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+3657112 [http-nio-9999-exec-8] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid@(String)
+3657121 [http-nio-9999-exec-8] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 0
+3681745 [http-nio-9999-exec-5] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+3681745 [http-nio-9999-exec-5] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid@(String)
+3681752 [http-nio-9999-exec-5] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 0
+3706900 [http-nio-9999-exec-3] DEBUG c.p.m.DeliveryAddressMapper.add - ==>  Preparing: insert into deliveryAddress ( isDefault, userEmail, receiver, spotAlias, contactNumber, phoneNumber, roadAddress, zipcodeAddress, remainAddress ) values ( ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+3706903 [http-nio-9999-exec-3] DEBUG c.p.m.DeliveryAddressMapper.add - ==> Parameters: false(Boolean), testid@(String), 테스트(String), ㅌㅅㅌ(String), 111(String), 111(String), 서울 강남구 강남대로 708(String), 서울 강남구 압구정동 386-1(String), ㅌㅅㅌ(String)
+3706910 [http-nio-9999-exec-3] DEBUG c.p.m.DeliveryAddressMapper.add - <==    Updates: 1
+3706918 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+3706918 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid@(String)
+3706928 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 1
+4313064 [http-nio-9999-exec-5] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+4313064 [http-nio-9999-exec-5] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid@(String)
+4313073 [http-nio-9999-exec-5] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 1
+4368555 [http-nio-9999-exec-2] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+4368555 [http-nio-9999-exec-2] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid@(String)
+4368567 [http-nio-9999-exec-2] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 1
+4376508 [http-nio-9999-exec-3] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+4376508 [http-nio-9999-exec-3] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid@(String)
+4376508 [http-nio-9999-exec-3] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 1
+4443295 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.delete - ==>  Preparing: delete from deliveryAddress where id = ? 
+4443296 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.delete - ==> Parameters: 6(Integer)
+4443302 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.delete - <==    Updates: 1
+4443311 [http-nio-9999-exec-7] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+4443311 [http-nio-9999-exec-7] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid@(String)
+4443317 [http-nio-9999-exec-7] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 0
+4771817 [http-nio-9999-exec-5] DEBUG c.p.m.UserMapper.getUserByEmail - ==>  Preparing: select * from `user` where email = ? 
+4771817 [http-nio-9999-exec-5] DEBUG c.p.m.UserMapper.getUserByEmail - ==> Parameters: 123123@(String)
+4771826 [http-nio-9999-exec-5] DEBUG c.p.m.UserMapper.getUserByEmail - <==      Total: 1
+4771827 [http-nio-9999-exec-12] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+4771827 [http-nio-9999-exec-12] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid@(String)
+4771833 [http-nio-9999-exec-12] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 0
+4771834 [http-nio-9999-exec-3] DEBUG c.p.m.DeliveryAddressMapper.add - ==>  Preparing: insert into deliveryAddress ( isDefault, userEmail, receiver, spotAlias, contactNumber, phoneNumber, roadAddress, zipcodeAddress, remainAddress ) values ( ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+4771834 [http-nio-9999-exec-3] DEBUG c.p.m.DeliveryAddressMapper.add - ==> Parameters: false(Boolean), testid@(String), ㅇㅇ(String), ㅇㅇ(String), ㅇㅇ(String), ㅇㅇ(String), 서울 강남구 강남대로 708(String), 서울 강남구 압구정동 386-1(String), ㅇㅇ(String)
+4771841 [http-nio-9999-exec-3] DEBUG c.p.m.DeliveryAddressMapper.add - <==    Updates: 1
+4771843 [http-nio-9999-exec-1] DEBUG c.p.m.UserMapper.getUserByEmail - ==>  Preparing: select * from `user` where email = ? 
+4771843 [http-nio-9999-exec-1] DEBUG c.p.m.UserMapper.getUserByEmail - ==> Parameters: 123123@(String)
+4771858 [http-nio-9999-exec-1] DEBUG c.p.m.UserMapper.getUserByEmail - <==      Total: 1
+4771985 [http-nio-9999-exec-5] DEBUG c.p.m.UserMapper.getUserByEmail - ==>  Preparing: select * from `user` where email = ? 
+4771985 [http-nio-9999-exec-5] DEBUG c.p.m.UserMapper.getUserByEmail - ==> Parameters: 123123@(String)
+4771985 [http-nio-9999-exec-1] DEBUG c.p.m.UserMapper.getUserByEmail - ==>  Preparing: select * from `user` where email = ? 
+4771985 [http-nio-9999-exec-1] DEBUG c.p.m.UserMapper.getUserByEmail - ==> Parameters: 123123@(String)
+4771985 [http-nio-9999-exec-5] DEBUG c.p.m.UserMapper.getUserByEmail - <==      Total: 1
+4772000 [http-nio-9999-exec-1] DEBUG c.p.m.UserMapper.getUserByEmail - <==      Total: 1
+1037 [main] INFO  c.p.ShoppingmallAuthBootApplication - Starting ShoppingmallAuthBootApplication on DESKTOP-BUNNS1P with PID 6184 (D:\workspace\shopping_auth\shoppingmall_auth-boot\target\classes started by danbi in D:\workspace\shopping_auth)
+1040 [main] DEBUG c.p.ShoppingmallAuthBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+1040 [main] INFO  c.p.ShoppingmallAuthBootApplication - The following profiles are active: dev
+3390 [main] INFO  com.plateer.config.DB - MariaDB Connector/J
+3867 [main] INFO  c.p.ShoppingmallAuthBootApplication - Started ShoppingmallAuthBootApplication in 3.483 seconds (JVM running for 4.651)
+35539 [http-nio-9999-exec-9] DEBUG c.p.m.UserMapper.getUserByEmail - ==>  Preparing: select * from `user` where email = ? 
+35555 [http-nio-9999-exec-9] DEBUG c.p.m.UserMapper.getUserByEmail - ==> Parameters: testid(String)
+35571 [http-nio-9999-exec-9] DEBUG c.p.m.UserMapper.getUserByEmail - <==      Total: 0
+42823 [http-nio-9999-exec-7] DEBUG c.p.m.UserMapper.getUserByEmail - ==>  Preparing: select * from `user` where email = ? 
+42823 [http-nio-9999-exec-7] DEBUG c.p.m.UserMapper.getUserByEmail - ==> Parameters: testid(String)
+42823 [http-nio-9999-exec-7] DEBUG c.p.m.UserMapper.getUserByEmail - <==      Total: 0
+81876 [http-nio-9999-exec-5] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.plateer.service.JwtServiceImpl.get(JwtServiceImpl.java:64)
+	at com.plateer.service.UserServiceImpl.getCurrentUserInfo(UserServiceImpl.java:52)
+	at com.plateer.controller.UserController.getCurrentUserInfo(UserController.java:53)
+	at sun.reflect.GeneratedMethodAccessor50.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+119708 [http-nio-9999-exec-3] DEBUG c.p.m.UserMapper.getUserByEmail - ==>  Preparing: select * from `user` where email = ? 
+119708 [http-nio-9999-exec-3] DEBUG c.p.m.UserMapper.getUserByEmail - ==> Parameters: testid@(String)
+119716 [http-nio-9999-exec-3] DEBUG c.p.m.UserMapper.getUserByEmail - <==      Total: 1
+163297 [http-nio-9999-exec-10] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.NullPointerException] with root cause
+java.lang.NullPointerException: null
+	at com.plateer.service.JwtServiceImpl.get(JwtServiceImpl.java:64)
+	at com.plateer.service.UserServiceImpl.getCurrentUserInfo(UserServiceImpl.java:52)
+	at com.plateer.controller.UserController.getCurrentUserInfo(UserController.java:53)
+	at sun.reflect.GeneratedMethodAccessor50.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+163644 [http-nio-9999-exec-5] DEBUG c.plateer.mapper.UserMapper.signUp - ==>  Preparing: insert into `user` values ( ?, ?, ?, ?, ?, ?) 
+163646 [http-nio-9999-exec-5] DEBUG c.plateer.mapper.UserMapper.signUp - ==> Parameters: testid(String), $2a$10$/zYW8aN1hXkALE93Y7/OGe0xKBYXP7PJSQ0U3TXdmx8jVuqdPfqQK(String), test(String), 01012341234(String), false(Boolean), false(Boolean)
+163653 [http-nio-9999-exec-5] DEBUG c.plateer.mapper.UserMapper.signUp - <==    Updates: 1
+207264 [http-nio-9999-exec-7] DEBUG c.p.m.UserMapper.getUserByEmail - ==>  Preparing: select * from `user` where email = ? 
+207264 [http-nio-9999-exec-7] DEBUG c.p.m.UserMapper.getUserByEmail - ==> Parameters: testid(String)
+207270 [http-nio-9999-exec-7] DEBUG c.p.m.UserMapper.getUserByEmail - <==      Total: 1
+207360 [http-nio-9999-exec-7] DEBUG c.p.m.UserMapper.getUserByEmail - ==>  Preparing: select * from `user` where email = ? 
+207360 [http-nio-9999-exec-7] DEBUG c.p.m.UserMapper.getUserByEmail - ==> Parameters: testid(String)
+207360 [http-nio-9999-exec-7] DEBUG c.p.m.UserMapper.getUserByEmail - <==      Total: 1
+213540 [http-nio-9999-exec-2] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+213540 [http-nio-9999-exec-2] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid(String)
+213546 [http-nio-9999-exec-2] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 0
+243642 [http-nio-9999-exec-9] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+243642 [http-nio-9999-exec-9] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid(String)
+243648 [http-nio-9999-exec-9] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 0
+259979 [http-nio-9999-exec-7] DEBUG c.p.m.DeliveryAddressMapper.add - ==>  Preparing: insert into deliveryAddress ( isDefault, userEmail, receiver, spotAlias, contactNumber, phoneNumber, roadAddress, zipcodeAddress, remainAddress ) values ( ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+259981 [http-nio-9999-exec-7] DEBUG c.p.m.DeliveryAddressMapper.add - ==> Parameters: false(Boolean), testid(String), test(String), test(String), test(String), test(String), 서울 강남구 압구정로 104(String), 서울 강남구 신사동 528(String), test(String)
+259985 [http-nio-9999-exec-7] DEBUG c.p.m.DeliveryAddressMapper.add - <==    Updates: 1
+259996 [http-nio-9999-exec-8] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+259997 [http-nio-9999-exec-8] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid(String)
+260004 [http-nio-9999-exec-8] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 1
+1026 [main] INFO  c.p.ShoppingmallAuthBootApplication - Starting ShoppingmallAuthBootApplication on DESKTOP-BUNNS1P with PID 13884 (D:\workspace\shopping_auth\shoppingmall_auth-boot\target\classes started by danbi in D:\workspace\shopping_auth)
+1030 [main] DEBUG c.p.ShoppingmallAuthBootApplication - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+1032 [main] INFO  c.p.ShoppingmallAuthBootApplication - The following profiles are active: dev
+3338 [main] INFO  com.plateer.config.DB - MariaDB Connector/J
+3802 [main] INFO  c.p.ShoppingmallAuthBootApplication - Started ShoppingmallAuthBootApplication in 3.448 seconds (JVM running for 4.623)
+8680 [http-nio-9999-exec-2] DEBUG c.p.m.DeliveryAddressMapper.delete - ==>  Preparing: delete from deliveryAddress where id = ? 
+8697 [http-nio-9999-exec-2] DEBUG c.p.m.DeliveryAddressMapper.delete - ==> Parameters: 8(Integer)
+8704 [http-nio-9999-exec-2] DEBUG c.p.m.DeliveryAddressMapper.delete - <==    Updates: 1
+9044 [http-nio-9999-exec-4] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+9060 [http-nio-9999-exec-4] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid(String)
+9077 [http-nio-9999-exec-4] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 0
+14217 [http-nio-9999-exec-9] DEBUG c.p.m.DeliveryAddressMapper.add - ==>  Preparing: insert into deliveryAddress ( isDefault, userEmail, receiver, spotAlias, contactNumber, phoneNumber, roadAddress, zipcodeAddress, remainAddress ) values ( ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+14218 [http-nio-9999-exec-9] DEBUG c.p.m.DeliveryAddressMapper.add - ==> Parameters: 1(Integer), testid(String), test(String), test(String), test(String), test(String), 서울 강남구 압구정로 104(String), 서울 강남구 신사동 528(String), test(String)
+14224 [http-nio-9999-exec-9] DEBUG c.p.m.DeliveryAddressMapper.add - <==    Updates: 1
+14239 [http-nio-9999-exec-2] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+14239 [http-nio-9999-exec-2] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid(String)
+14247 [http-nio-9999-exec-2] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 1
+61546 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+61547 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid(String)
+61557 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 1
+64922 [http-nio-9999-exec-1] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+64923 [http-nio-9999-exec-1] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid(String)
+64930 [http-nio-9999-exec-1] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 1
+102766 [http-nio-9999-exec-1] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+102767 [http-nio-9999-exec-1] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid(String)
+102773 [http-nio-9999-exec-1] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 1
+115627 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+115627 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid(String)
+115634 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 1
+130149 [http-nio-9999-exec-1] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+130149 [http-nio-9999-exec-1] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid(String)
+130160 [http-nio-9999-exec-1] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 1
+133058 [http-nio-9999-exec-3] DEBUG c.p.m.DeliveryAddressMapper.delete - ==>  Preparing: delete from deliveryAddress where id = ? 
+133058 [http-nio-9999-exec-3] DEBUG c.p.m.DeliveryAddressMapper.delete - ==> Parameters: 9(Integer)
+133064 [http-nio-9999-exec-3] DEBUG c.p.m.DeliveryAddressMapper.delete - <==    Updates: 1
+133080 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+133080 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid(String)
+133086 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 0
+146108 [http-nio-9999-exec-9] DEBUG c.p.m.DeliveryAddressMapper.add - ==>  Preparing: insert into deliveryAddress ( isDefault, userEmail, receiver, spotAlias, contactNumber, phoneNumber, roadAddress, zipcodeAddress, remainAddress ) values ( ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+146109 [http-nio-9999-exec-9] DEBUG c.p.m.DeliveryAddressMapper.add - ==> Parameters: 1(Integer), testid(String), dd(String), dd(String), dd(String), dd(String), 부산 강서구 르노삼성대로 14(String), 부산 강서구 신호동 294(String), dd(String)
+146114 [http-nio-9999-exec-9] DEBUG c.p.m.DeliveryAddressMapper.add - <==    Updates: 1
+146126 [http-nio-9999-exec-1] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+146126 [http-nio-9999-exec-1] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid(String)
+146133 [http-nio-9999-exec-1] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 1
+156144 [http-nio-9999-exec-10] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+156145 [http-nio-9999-exec-10] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid(String)
+156154 [http-nio-9999-exec-10] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 1
+605402 [http-nio-9999-exec-2] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+605403 [http-nio-9999-exec-2] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid(String)
+605409 [http-nio-9999-exec-2] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 1
+702912 [http-nio-9999-exec-2] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+702913 [http-nio-9999-exec-2] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid(String)
+702920 [http-nio-9999-exec-2] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 1
+774527 [http-nio-9999-exec-10] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+774528 [http-nio-9999-exec-10] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid(String)
+774536 [http-nio-9999-exec-10] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 1
+804730 [http-nio-9999-exec-2] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+804730 [http-nio-9999-exec-2] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid(String)
+804737 [http-nio-9999-exec-2] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 1
+807536 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+807537 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid(String)
+807546 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 1
+884618 [http-nio-9999-exec-10] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+884618 [http-nio-9999-exec-10] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid(String)
+884643 [http-nio-9999-exec-10] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 1
+901240 [http-nio-9999-exec-8] DEBUG c.p.m.UserMapper.getUserByEmail - ==>  Preparing: select * from `user` where email = ? 
+901240 [http-nio-9999-exec-8] DEBUG c.p.m.UserMapper.getUserByEmail - ==> Parameters: testid(String)
+901240 [http-nio-9999-exec-8] DEBUG c.p.m.UserMapper.getUserByEmail - <==      Total: 1
+901346 [http-nio-9999-exec-8] DEBUG c.p.m.UserMapper.getUserByEmail - ==>  Preparing: select * from `user` where email = ? 
+901346 [http-nio-9999-exec-8] DEBUG c.p.m.UserMapper.getUserByEmail - ==> Parameters: testid(String)
+901362 [http-nio-9999-exec-8] DEBUG c.p.m.UserMapper.getUserByEmail - <==      Total: 1
+1116105 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+1116105 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid(String)
+1116131 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 1
+1134791 [http-nio-9999-exec-9] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+1134791 [http-nio-9999-exec-9] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid(String)
+1134807 [http-nio-9999-exec-9] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 1
+1207092 [http-nio-9999-exec-2] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+1207092 [http-nio-9999-exec-2] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid(String)
+1207092 [http-nio-9999-exec-2] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 1
+1216648 [http-nio-9999-exec-10] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+1216648 [http-nio-9999-exec-10] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid(String)
+1216657 [http-nio-9999-exec-10] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 1
+1233863 [http-nio-9999-exec-8] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+1233863 [http-nio-9999-exec-8] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid(String)
+1233870 [http-nio-9999-exec-8] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 1
+1336673 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+1336673 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid(String)
+1336679 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 1
+1352784 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+1352784 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid(String)
+1352795 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 1
+1381421 [http-nio-9999-exec-2] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+1381421 [http-nio-9999-exec-2] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid(String)
+1381427 [http-nio-9999-exec-2] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 1
+1393165 [http-nio-9999-exec-2] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+1393165 [http-nio-9999-exec-2] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid(String)
+1393172 [http-nio-9999-exec-2] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 1
+1401845 [http-nio-9999-exec-9] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+1401845 [http-nio-9999-exec-9] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid(String)
+1401852 [http-nio-9999-exec-9] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 1
+1476608 [http-nio-9999-exec-7] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+1476608 [http-nio-9999-exec-7] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid(String)
+1476618 [http-nio-9999-exec-7] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 1
+1548237 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+1548237 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid(String)
+1548245 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 1
+1558592 [http-nio-9999-exec-9] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+1558593 [http-nio-9999-exec-9] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid(String)
+1558599 [http-nio-9999-exec-9] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 1
+3152221 [http-nio-9999-exec-7] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+3152221 [http-nio-9999-exec-7] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid(String)
+3152229 [http-nio-9999-exec-7] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 1
+3156718 [http-nio-9999-exec-9] DEBUG c.p.m.DeliveryAddressMapper.delete - ==>  Preparing: delete from deliveryAddress where id = ? 
+3156719 [http-nio-9999-exec-9] DEBUG c.p.m.DeliveryAddressMapper.delete - ==> Parameters: 10(Integer)
+3156727 [http-nio-9999-exec-9] DEBUG c.p.m.DeliveryAddressMapper.delete - <==    Updates: 1
+3156736 [http-nio-9999-exec-3] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+3156737 [http-nio-9999-exec-3] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid(String)
+3156744 [http-nio-9999-exec-3] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 0
+3174965 [http-nio-9999-exec-8] DEBUG c.p.m.DeliveryAddressMapper.add - ==>  Preparing: insert into deliveryAddress ( isDefault, userEmail, receiver, spotAlias, contactNumber, phoneNumber, roadAddress, zipcodeAddress, remainAddress ) values ( ?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+3174966 [http-nio-9999-exec-8] DEBUG c.p.m.DeliveryAddressMapper.add - ==> Parameters: 1(Integer), testid(String), ee(String), ee(String), ee(String), ee(String), 서울 강남구 강남대로 708(String), 서울 강남구 압구정동 386-1(String), ss(String)
+3174972 [http-nio-9999-exec-8] DEBUG c.p.m.DeliveryAddressMapper.add - <==    Updates: 1
+3174982 [http-nio-9999-exec-1] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+3174982 [http-nio-9999-exec-1] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid(String)
+3174987 [http-nio-9999-exec-1] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 1
+3220172 [http-nio-9999-exec-10] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+3220173 [http-nio-9999-exec-10] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid(String)
+3220178 [http-nio-9999-exec-10] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 1
+3223859 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+3223859 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid(String)
+3223864 [http-nio-9999-exec-6] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 1
+4336905 [http-nio-9999-exec-3] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+4336906 [http-nio-9999-exec-3] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid(String)
+4336912 [http-nio-9999-exec-3] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 1
+4384586 [http-nio-9999-exec-10] DEBUG c.p.m.DeliveryAddressMapper.list - ==>  Preparing: select * from deliveryAddress where userEmail = ? order by isDefault desc 
+4384586 [http-nio-9999-exec-10] DEBUG c.p.m.DeliveryAddressMapper.list - ==> Parameters: testid(String)
+4384593 [http-nio-9999-exec-10] DEBUG c.p.m.DeliveryAddressMapper.list - <==      Total: 1
