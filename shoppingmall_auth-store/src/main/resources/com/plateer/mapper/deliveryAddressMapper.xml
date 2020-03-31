@@ -32,9 +32,10 @@
         select * from deliveryAddress
         where
         userEmail = #{userEmail}
+        order by isDefault desc
     </select>
     <delete id="delete">
-        delete * from deliveryAddress
+        delete from deliveryAddress
         where
         id = #{id}
     </delete>

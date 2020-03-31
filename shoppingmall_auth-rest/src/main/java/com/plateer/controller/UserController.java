@@ -57,4 +57,9 @@ public class UserController {
     public void updateUserInfo(@RequestBody User user){
         userService.updateUserInfo(user);
     }
+
+    @GetMapping("/duplicateCheck/{email}")
+    public boolean duplicateCheck(@PathVariable String email){
+        return userService.getUserByEmail(email) != null;
+    }
 }

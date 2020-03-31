@@ -43,7 +43,7 @@ public class DeliveryAddressController {
     }
 
     @GetMapping("/setDefaultAddr/{id}")
-    public void setDefaultAddress(@RequestParam int id){
+    public void setDefaultAddress(@PathVariable int id){
         deliveryAddressService.setDefaultAddress(id);
     }
 }
