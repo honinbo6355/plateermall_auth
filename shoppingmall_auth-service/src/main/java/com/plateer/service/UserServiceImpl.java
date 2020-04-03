@@ -55,7 +55,10 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void updateUserInfo(User user) {
-        user.setPassword(BCrypt.hashpw(user.getPassword(), BCrypt.gensalt()));
+        if(user.getPassword() == null){
+            user.setPassword(BCrypt.hashpw(user.getPassword(), BCrypt.gensalt()));
+        }
+
         userDao.updateUser(user);
     }
 }

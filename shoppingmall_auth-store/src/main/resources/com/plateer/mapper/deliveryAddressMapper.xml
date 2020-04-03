@@ -42,13 +42,13 @@
     <update id="update" parameterType="com.plateer.domain.DeliveryAddress">
         update deliveryAddress
         set
-        reveiver = #{receiver},
+        receiver = #{receiver},
         spotAlias = #{spotAlias},
-        contatctNumber = #{contactNumber},
+        contactNumber = #{contactNumber},
         phoneNumber = #{phoneNumber},
         roadAddress = #{roadAddress},
         zipcodeAddress = #{zipcodeAddress},
-        remainAddress = #{reamainAddress}
+        remainAddress = #{remainAddress}
         where id = #{id}
     </update>
     <update id="setDefault">

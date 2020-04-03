@@ -23,9 +23,12 @@
     <update id="update" parameterType="com.plateer.domain.User">
         update `user`
         set
+        <if test="password != null">
         password = #{password},
+        </if>
         phoneNumber = #{phoneNumber},
         smsAgree = #{smsAgree},
         emailAgree = #{emailAgree}
+        where email = #{email}
     </update>
 </mapper>
