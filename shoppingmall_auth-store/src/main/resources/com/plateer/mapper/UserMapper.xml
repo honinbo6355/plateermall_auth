@@ -11,7 +11,9 @@
         #{name},
         #{phoneNumber},
         #{smsAgree},
-        #{emailAgree})
+        #{emailAgree},
+        0,
+        '')
     </insert>
 
     <select id="getUserByEmail" resultType="com.plateer.domain.User">

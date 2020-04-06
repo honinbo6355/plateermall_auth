@@ -38,9 +38,7 @@ public class UserController {
             msg = userService.validateUser(user);
             if (msg.equals("success")) {
                 User loginUser = userService.getUserByEmail(user.getEmail());
-                String token = jwtService.create("member", loginUser);
-                response.setHeader("Authorization", "Bearer " + token);
-                return token;
+                return jwtService.create("member", loginUser);
             }
         } catch (Exception e) {
             return "failed";
@@ -54,8 +52,9 @@ public class UserController {
     }
 
     @PutMapping("/updateUserInfo")
-    public void updateUserInfo(@RequestBody User user){
+    public String updateUserInfo(@RequestBody User user){
         userService.updateUserInfo(user);
+        return jwtService.create("member", user);
     }
 
     @GetMapping("/duplicateCheck/{email}")

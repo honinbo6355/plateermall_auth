@@ -48,17 +48,15 @@ public class UserServiceImpl implements UserService {
     }
 
     public User getCurrentUserInfo(){
-        ObjectMapper objectMapper = new ObjectMapper();
-        User test = objectMapper.convertValue(jwtService.get("member"),User.class);
+        User test = new ObjectMapper().convertValue(jwtService.get("member"),User.class);
         return test;
     }
 
     @Override
     public void updateUserInfo(User user) {
-        if(user.getPassword() == null){
+        if(user.getPassword() != null){
             user.setPassword(BCrypt.hashpw(user.getPassword(), BCrypt.gensalt()));
         }
-
         userDao.updateUser(user);
     }
 }
