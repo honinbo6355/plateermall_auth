@@ -30,7 +30,8 @@
         </if>
         phoneNumber = #{phoneNumber},
         smsAgree = #{smsAgree},
-        emailAgree = #{emailAgree}
+        emailAgree = #{emailAgree},
+        point = #{point}
         where email = #{email}
     </update>
 </mapper>

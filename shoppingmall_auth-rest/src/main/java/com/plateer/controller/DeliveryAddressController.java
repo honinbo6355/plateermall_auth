@@ -2,9 +2,11 @@ package com.plateer.controller;
 
 import com.plateer.domain.DeliveryAddress;
 import com.plateer.service.DeliveryAddressService;
+import com.plateer.service.S3Client;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.File;
 import java.util.List;
 
 @Slf4j
@@ -17,9 +19,11 @@ import java.util.List;
 public class DeliveryAddressController {
 
     private DeliveryAddressService deliveryAddressService;
+//    private S3Client s3Client;
 
-    public DeliveryAddressController(DeliveryAddressService deliveryAddressService){
+    public DeliveryAddressController(DeliveryAddressService deliveryAddressService, S3Client s3Client){
         this.deliveryAddressService = deliveryAddressService;
+//        this.s3Client = s3Client;
     }
 
     @PostMapping("/add")
@@ -46,4 +50,11 @@ public class DeliveryAddressController {
     public void setDefaultAddress(@PathVariable int id){
         deliveryAddressService.setDefaultAddress(id);
     }
+
+//    @GetMapping("/upload")
+//    public void upload(){
+//        File file = new File("D:\\sample.jpg");
+//
+//        s3Client.fileUpload("sample.jpg",file);
+//    }
 }
