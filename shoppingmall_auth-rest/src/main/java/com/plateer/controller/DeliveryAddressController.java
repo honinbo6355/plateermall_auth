@@ -2,7 +2,7 @@ package com.plateer.controller;
 
 import com.plateer.domain.DeliveryAddress;
 import com.plateer.service.DeliveryAddressService;
-import com.plateer.service.S3Client;
+//import com.plateer.service.S3Client;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,7 +21,7 @@ public class DeliveryAddressController {
     private DeliveryAddressService deliveryAddressService;
 //    private S3Client s3Client;
 
-    public DeliveryAddressController(DeliveryAddressService deliveryAddressService, S3Client s3Client){
+    public DeliveryAddressController(DeliveryAddressService deliveryAddressService){
         this.deliveryAddressService = deliveryAddressService;
 //        this.s3Client = s3Client;
     }

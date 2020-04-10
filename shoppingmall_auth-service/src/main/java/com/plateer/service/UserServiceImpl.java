@@ -49,7 +49,7 @@ public class UserServiceImpl implements UserService {
 
     public User getCurrentUserInfo(){
         User test = new ObjectMapper().convertValue(jwtService.get("member"),User.class);
-        return test;
+        return userDao.getUserByEmail(test.getEmail());
     }
 
     @Override
